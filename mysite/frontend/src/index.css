@@ -1,0 +1,26 @@
+.socials-navbar {
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  min-width: 3%;
+}
+
+.socials {
+  display: grid;
+  position: absolute;
+  bottom: 2em;
+}
+
+.favicon {
+  position: absolute;
+  top: 2em;
+}
+
+.social-navbar-icons {
+  width: 25px;
+  height: 25px;
+}
+
+.social-links {
+  margin-top: 1em;
+}
