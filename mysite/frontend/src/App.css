@@ -3,17 +3,17 @@
   /* --grey: #7e8a98; */
   /* --grey: #919598; */
   /* --lightgrey: #7c838e; */
-  /* --black: #1c1c1c; */
-  /* --white: #bebcbe; */
-
-  --grey: #828e9c;
-  --lightgrey: #7e8691;
   /* --darkgrey: #454545; */
   /* --darkgrey: #3c424a; */
-  --darkgrey: #44454c;
-  --black: #232323;
   /* --black: #1c1c1c; */
   /* --black: #131313; */
+  /* --white: #bebcbe; */
+
+  /* --grey: #828e9c; */
+  --grey: #bcc5c3;
+  --lightgrey: #7e8691;
+  --darkgrey: #44454c;
+  --black: #232323;
 }
 
 * {
@@ -94,25 +94,6 @@ body {
   justify-content: center;
 }
 
-.about-me-container {
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  margin-top: 20em;
-}
-
-.about-me-content {
-  width: 60%;
-  margin-top: .7em;
-  display: grid;
-  justify-content: center;
-}
-
-.section-skills {
-  position: relative;
-  top: 65px;
-}
-
 .greetings, .aspiration {
   font-size: 32px;
 }
@@ -153,13 +134,31 @@ body {
   font-weight: bold;
 }
 
-.section-headers p {
-  color: var(--black);
+/* ############################################## */
+/* ABOUT ME */
+/* ############################################## */
+.about-me-container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin-top: 25em;
+}
+
+.about-me-content {
+  width: 60%;
+  margin-top: .7em;
+  display: grid;
+  justify-content: center;
+}
+
+.section-skills {
+  position: relative;
+  top: 65px;
 }
 
 
-.project-container {
-  margin-top: 20em;
+.section-headers p {
+  color: var(--black);
 }
 
 .skill-section {
@@ -178,4 +177,59 @@ body {
 
 .skills ul {
   /* list-style: none; */
+}
+
+/* ############################################## */
+/* ABOUT ME */
+/* ############################################## */
+.project-container {
+  margin-top: 25em;
+}
+
+.project-extras-container {
+  margin-top: 3em;
+  width: 100%;
+  height: 50em;
+  display: grid;
+  justify-content: start;
+}
+
+.project-folder {
+    width: 170px;
+    height: 250px;
+    width: 180px;
+    height: 230px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    /* background-color: var(--darkgrey); */
+    background-color: rgba(68,69,76,0.3);
+}
+
+.project-folder:before {
+    content: '';
+    width: 60%;
+    height: 12px;
+    background-color: var(--darkgrey);
+    position: absolute;
+    top: -12px;
+}
+
+.project-folder {
+  clip-path: polygon(0% 0%, 63% 0%, 75% 7%, 100% 7%, 100% 100%, 9% 100%, 0% 94%);
+}
+
+.project-folder {
+  clip-path: polygon(
+    0% 0%, 82% 0%, 100% 13%, 
+    100% 30%, 98% 30%, 98% 35%, 100% 35%, 
+    100% 98%, 98% 100%, 
+    2% 100%, 0% 98%, 
+    0% 50%, 2% 50%, 2% 33%, .7% 33%, .7% 30%, 2% 30%, 2% 35%, 2% 25%, 0% 25%
+  );
+}
+
+.project-folder:hover {
+    background-color: rgba(68,69,76,.8);
+
 }

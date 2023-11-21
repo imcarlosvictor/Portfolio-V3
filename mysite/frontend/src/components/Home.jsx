@@ -65,7 +65,7 @@ export default function Home() {
               </div>
 
               <div className="project-extras-container">
-                <div className="project-extra-folder">
+                <div className="project-folder">
                 </div>
               </div>
             </div>
