@@ -51,7 +51,7 @@ export default function Home() {
           </div>
 
           <div className="project-container">
-            <div className="section-headers" id="about-header">
+            <div className="section-headers" id="project-header">
               <p>// Projects</p>
             </div>
 
@@ -65,8 +65,50 @@ export default function Home() {
               </div>
 
               <div className="project-extras-container">
+
                 <div className="project-folder">
+                  <div className="project-info">
+                    <div className="banner"></div>
+                    <p className="project-text">project:</p>
+                    <p className="project-title">Unified Fugitive Database</p>
+                  </div>
                 </div>
+
+                <div className="project-folder">
+                  <div className="project-info">
+                    <div className="banner"></div>
+                    <p className="project-text">project:</p>
+                    <p className="project-title">medusa</p>
+                  </div>
+                </div>
+
+                <div className="project-folder">
+                  <div className="project-info">
+                    <div className="banner"></div>
+                    <p className="project-text">project:</p>
+                    <p className="project-title">medusa</p>
+                  </div>
+                </div>
+
+                <div className="project-folder">
+                  <div className="project-info">
+                    <div className="banner"></div>
+                    <p className="project-text">project:</p>
+                    <p className="project-title">medusa</p>
+                  </div>
+                </div>
+
+                <div className="project-folder">
+                  <div className="project-info">
+                    <div className="banner"></div>
+                    <p className="project-text">project:</p>
+                    <p className="project-title">medusa</p>
+                  </div>
+                </div>
+
+
+
+
               </div>
             </div>
           </div>
