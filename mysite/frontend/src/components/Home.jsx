@@ -78,7 +78,7 @@ export default function Home() {
                   <div className="project-info">
                     <div className="banner"></div>
                     <p className="project-text">project:</p>
-                    <p className="project-title">medusa</p>
+                    <p className="project-title">lucas car rentals</p>
                   </div>
                 </div>
 
@@ -86,7 +86,7 @@ export default function Home() {
                   <div className="project-info">
                     <div className="banner"></div>
                     <p className="project-text">project:</p>
-                    <p className="project-title">medusa</p>
+                    <p className="project-title">weather app</p>
                   </div>
                 </div>
 
@@ -94,7 +94,7 @@ export default function Home() {
                   <div className="project-info">
                     <div className="banner"></div>
                     <p className="project-text">project:</p>
-                    <p className="project-title">medusa</p>
+                    <p className="project-title">gpu price scraper</p>
                   </div>
                 </div>
 
@@ -102,7 +102,7 @@ export default function Home() {
                   <div className="project-info">
                     <div className="banner"></div>
                     <p className="project-text">project:</p>
-                    <p className="project-title">medusa</p>
+                    <p className="project-title">adam williamson portfolio</p>
                   </div>
                 </div>
 

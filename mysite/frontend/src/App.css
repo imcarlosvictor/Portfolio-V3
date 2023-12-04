@@ -1,16 +1,21 @@
 :root {
-  /* --grey: #828e9c; */
+  --grey: #828e9c;
+  --grey: #e5e3e6;
   /* --lightgrey: #7c838e; */
   /* --darkgrey: #454545; */
   /* --darkgrey: #3c424a; */
   /* --black: #1c1c1c; */
   /* --black: #131313; */
 
-  --grey: #bcc5c3;
+  /* --grey: #bcc5c3; */
+  --grey: #c0c0d0;
   --lightgrey: #7e8691;
   --darkgrey: #44454c;
   --black: #232323;
   --white: #bebcbe;
+  --greyblue: #3a4656;
+  --greyblue: #414e5f;
+  --tan:#aeae9d;
 }
 
 * {
@@ -160,6 +165,7 @@ body {
 
 .section-headers p {
   color: var(--black);
+  font-size: 32px;
 }
 
 .skill-section {
@@ -198,34 +204,38 @@ body {
 }
 
 .project-folder {
-    width: 170px;
-    height: 250px;
-    /* width: 180px; */
-    /* height: 230px; */
-    width: 140px;
-    height: 120px;
-    margin: 0 auto;
-    margin-top: 50px;
-    position: relative;
-    background-color: rgba(35,35,35,.5);
-    /* background: var(--darkgrey); */
+  /* width: 170px; */
+  /* height: 250px; */
+  /* width: 180px; */
+  /* height: 230px; */
+  /* width: 140px; */
+  /* height: 120px; */
+  width: 140px;
+  height: 180px;
+  margin: 0 auto;
+  /* margin-top: 50px; */
+  position: relative;
+  background-color: rgba(35,35,35,.3);
+  /* background: var(--darkgrey); */
 }
 
 .project-folder:before {
     content: '';
     width: 60%;
     height: 12px;
-    background-color: var(--darkgrey);
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: -12px;
 }
 
 .project-folder {
   clip-path: polygon(
-  0% 0%, 55% 0%, 65% 7%, 98% 7%, 
-  100% 9%, 100% 100%, 4% 100%, 0% 95%);
+    0% 0%, 98% 0%, 100% 3%, 100% 100%, 10% 100%, 0% 92%
+  );
 }
 
+/* SIM CARD */
 /* .project-folder { */
 /*   clip-path: polygon( */
 /*     0% 0%, 82% 0%, 100% 13%, */ 
@@ -236,9 +246,19 @@ body {
 /*   ); */
 /* } */
 
+
+/* .project-folder { */
+/*   clip-path: polygon( */
+/*     0% 0%, 98% 0%, */
+/*     100% 3%, 100% 100%, */
+/*     3% 100%, 0% 98%, */
+/*   ); */
+/* } */
+
 .project-folder:hover {
-  background-color: var(--darkgrey);
-  background: linear-gradient(to bottom, #f0cd82, #fcd571);
+  /* background: linear-gradient(to bottom, #f0cd82, #fcd571); */
+  background-color: rgba(35,35,35,.4);
+  cursor: pointer;
 }
 
 .banner {
@@ -248,13 +268,8 @@ body {
 
 .project-info {
   width: 100%;
-  height: 100%;
-  /* position: relative; */
-  /* top: 1em; */
-  /* left: .7em; */
-  padding: 1em .7em;
-  /* padding: 1em .5em; */
-  /* border-radius: 8px; */
+  height: 80%;
+  padding: 1em 1em;
   /* background-color: rgba(51,255,0,.6); */
 }
 
