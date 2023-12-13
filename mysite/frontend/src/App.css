@@ -1,13 +1,9 @@
 :root {
-  --grey: #828e9c;
-  --grey: #e5e3e6;
-  /* --lightgrey: #7c838e; */
-  /* --darkgrey: #454545; */
-  /* --darkgrey: #3c424a; */
-  /* --black: #1c1c1c; */
-  /* --black: #131313; */
-
+  /* --grey: #828e9c; */
+  /* --grey: #e5e3e6; */
   /* --grey: #bcc5c3; */
+
+  /* -------- ORIGINAL -------- */
   --grey: #c0c0d0;
   --lightgrey: #7e8691;
   --darkgrey: #44454c;
@@ -16,6 +12,23 @@
   --greyblue: #3a4656;
   --greyblue: #414e5f;
   --tan:#aeae9d;
+
+  /* -------- SECOND THEME -------- */
+  --grey: #232b36;
+  /* --grey: #262b32; */
+  --blue: #414f5f;
+  --blue: #6f7a88;
+  --white: #f6fafb;
+  --cement: #a1a19e;
+
+  /* -------- THIRD THEME -------- */
+  --grey: #191a1c;
+  --white: #eceded;
+  --white: #d6dada;
+  --cement: #a1a19e;
+  --wet-cement: #b6b4af;
+  --olive: #4f4b3d;
+  /* --olive: #8c8c73; */
 }
 
 * {
@@ -26,7 +39,7 @@
   font-family: 'Barlow Semi Condensed', sans-serif;
   /* overflow: hidden; */
   text-transform: uppercase;
-  color: var(--darkgrey);
+  color: var(--cement);
 }
 
 body::-webkit-scrollbar {
@@ -45,35 +58,35 @@ body {
   justify-content: center;
 }
 
-.noise-bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
-  background: transparent url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclojure2d.github.io%2Fclojure2d%2Fdocs%2Fimages%2Foverlays%2Fnoise.png&f=1&nofb=1&ipt=d782e8dc396cc1a612d0be8bed505689aecd9c554a442bc1e7f4788542069170&ipo=images') repeat 0 0;
-  background-repeat: repeat;
-  animation: bg-animation 1.5s infinite;
-  opacity: .26;
-  visibility: visible;
-  z-index: -1;
-}
+/* .noise-bg { */
+/*   position: fixed; */
+/*   top: -50%; */
+/*   left: -50%; */
+/*   right: -50%; */
+/*   bottom: -50%; */
+/*   width: 200%; */
+/*   height: 200vh; */
+/*   background: transparent url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclojure2d.github.io%2Fclojure2d%2Fdocs%2Fimages%2Foverlays%2Fnoise.png&f=1&nofb=1&ipt=d782e8dc396cc1a612d0be8bed505689aecd9c554a442bc1e7f4788542069170&ipo=images') repeat 0 0; */
+/*   background-repeat: repeat; */
+/*   animation: bg-animation 1.5s infinite; */
+/*   opacity: .26; */
+/*   visibility: visible; */
+/*   z-index: -1; */
+/* } */
 
-@keyframes bg-animation {
-  0% { transform: translate(0,0) }
-  10% { transform: translate(-5%,-5%) }
-  20% { transform: translate(-10%,5%) }
-  30% { transform: translate(5%,-10%) }
-  40% { transform: translate(-5%,15%) }
-  50% { transform: translate(-10%,5%) }
-  60% { transform: translate(15%,0) }
-  70% { transform: translate(0,10%) }
-  80% { transform: translate(-15%,0) }
-  90% { transform: translate(10%,5%) }
-  100% { transform: translate(5%,0) }
-}
+/* @keyframes bg-animation { */
+/*   0% { transform: translate(0,0) } */
+/*   10% { transform: translate(-5%,-5%) } */
+/*   20% { transform: translate(-10%,5%) } */
+/*   30% { transform: translate(5%,-10%) } */
+/*   40% { transform: translate(-5%,15%) } */
+/*   50% { transform: translate(-10%,5%) } */
+/*   60% { transform: translate(15%,0) } */
+/*   70% { transform: translate(0,10%) } */
+/*   80% { transform: translate(-15%,0) } */
+/*   90% { transform: translate(10%,5%) } */
+/*   100% { transform: translate(5%,0) } */
+/* } */
 
 
 /* ############################################## */
@@ -107,37 +120,38 @@ body {
 .my-name {
   font-weight: bold;
   font-size: 110px;
-  color: var(--black);
+  color: var(--white);
   text-transform: uppercase;
 }
 
 #profession {
-  color: var(--black);
+  color: var(--white);
   font-weight: bold;
 }
 
 #to-projects {
   background: rgba(93,93,93,0.1);
-  border: 1px solid var(--black);
+  border: 1px solid var(--olive);
   border-radius: 1px;
   margin-top: 1em;
   margin-right: 3em;
   padding: 1.2em 5em;
   font-size: 18px;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--white);
   transition: all 0.2s ease;
 }
 
 #to-projects:hover {
   cursor: pointer;
-  background: var(--black);
-  color: var(--grey);
+  background: var(--olive);
+  color: var(--white);
 }
 
-.section-headers {
-  font-size: 30px;
-  font-weight: bold;
+.social-links {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
 }
 
 /* ############################################## */
@@ -164,8 +178,8 @@ body {
 
 
 .section-headers p {
-  color: var(--black);
-  font-size: 32px;
+  font-size: 28px;
+  color: var(--cement);
 }
 
 .skill-section {

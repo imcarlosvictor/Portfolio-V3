@@ -1,0 +1,197 @@
+:root {
+  /* --grey: #828a95; */
+  /* --grey: #7e8a98; */
+  /* --grey: #919598; */
+  /* --lightgrey: #7c838e; */
+  /* --black: #1c1c1c; */
+  /* --white: #bebcbe; */
+
+  --grey: #828e9c;
+  --lightgrey: #7e8691;
+  /* --darkgrey: #454545; */
+  /* --darkgrey: #3c424a; */
+  --darkgrey: #44454c;
+  --black: #232323;
+  /* --black: #1c1c1c; */
+  /* --black: #131313; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  /* overflow: hidden; */
+  text-transform: uppercase;
+  color: var(--darkgrey);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--grey);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+}
+
+.noise-bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclojure2d.github.io%2Fclojure2d%2Fdocs%2Fimages%2Foverlays%2Fnoise.png&f=1&nofb=1&ipt=d782e8dc396cc1a612d0be8bed505689aecd9c554a442bc1e7f4788542069170&ipo=images') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 1.5s infinite;
+  opacity: .26;
+  visibility: visible;
+  z-index: -1;
+}
+
+@keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
+
+
+/* ############################################## */
+/* HOME PAGE */
+/* ############################################## */
+.content {
+  /* width: 100%; */
+  height: 100%;
+  display: grid;
+  /* justify-content: center; */
+  margin-left: 22em;
+}
+
+.introduction-container {
+  height: 70vh;
+  display: grid;
+  justify-content: start;
+  align-items: end;
+}
+
+.introduction-content {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+}
+
+.about-me-container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  margin-top: 20em;
+}
+
+.about-me-content {
+  width: 60%;
+  display: grid;
+  justify-content: center;
+}
+
+.section-title {
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+  color: var(--black);
+  border: 1px solid var(--black);
+
+  position: relative;
+  left: -35px;
+  top: 60px;
+  font-size: 12px;
+
+}
+
+.section-skills {
+  position: relative;
+  left: -35px;
+  top: 52px;
+}
+
+.greetings, .aspiration {
+  font-size: 32px;
+}
+
+.my-name {
+  font-weight: bold;
+  font-size: 110px;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+#profession {
+  color: var(--black);
+  font-weight: bold;
+}
+
+#to-projects {
+  background: rgba(93,93,93,0.1);
+  border: 1px solid var(--black);
+  border-radius: 1px;
+  margin-top: 1em;
+  margin-right: 3em;
+  padding: 1.2em 5em;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--black);
+  transition: all 0.2s ease;
+}
+
+#to-projects:hover {
+  cursor: pointer;
+  background: var(--black);
+  color: var(--grey);
+}
+
+.section-headers {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.section-headers p {
+  color: var(--black);
+}
+
+/* #about-me-section { */
+/*   width: 65%; */
+/* } */
+
+.project-container {
+  margin-top: 20em;
+}
+
+.skill-section {
+  margin-top: 1em;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  min-width: 30%;
+  width: 40%;
+  margin-top: .5em;
+  margin-left: 1em;
+  /* font-size: 20px; */
+}
+
+.skills ul {
+  /* list-style: none; */
+}

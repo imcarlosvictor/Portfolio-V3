@@ -10,14 +10,15 @@ export default function Navbar() {
           </a>
 
           <div className="socials">
+
             <a href="https://www.linkedin.com/in/imcarlosvictor/" target="_blank" rel="noopener noreferrer" className="social-links">
-              <img src="../src/assets/linkedin-text-48px.png" alt="linkedin-icon" className="social-navbar-icons" id="linkedin-icon"/>
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
             </a>
             <a href="https://github.com/imcarlosvictor" target="_blank" rel="noopener noreferrer" className="social-links">
-              <img src="../src/assets/github-icon-48px.png" alt="linkedin-icon" className="social-navbar-icons" id="github-icon"/>
+              <i class="fa fa-code-fork" aria-hidden="true"></i>
             </a>       
-          </div>
 
+          </div>
         </div>
       </nav>
     )
