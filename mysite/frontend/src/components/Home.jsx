@@ -1,21 +1,23 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
+  useEffect( () => {
+      // Scrollbar progress
+      let progressBar = document.querySelector(".progress-bar");
+      function updateProgressBar() {
+        progressBar.style.height = `${getScrollPercentage()}%`
+        requestAnimationFrame(updateProgressBar)
+      }
+
+      function getScrollPercentage() {
+        return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)
+      }
+      updateProgressBar()
+  })
+
   const createHomePage = () => {
-    // Scrollbar progress
-    let progressBar = document.querySelector(".progress-bar");
-    function updateProgressBar() {
-      progressBar.style.height = `${getScrollPercentage()}%`
-      requestAnimationFrame(updateProgressBar)
-    }
-
-    function getScrollPercentage() {
-      return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)
-    }
-
-    updateProgressBar()
-
     return (
       <>
         <div className="content">
