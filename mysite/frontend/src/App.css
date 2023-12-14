@@ -4,31 +4,38 @@
   /* --grey: #bcc5c3; */
 
   /* -------- ORIGINAL -------- */
-  --grey: #c0c0d0;
-  --lightgrey: #7e8691;
-  --darkgrey: #44454c;
-  --black: #232323;
-  --white: #bebcbe;
-  --greyblue: #3a4656;
-  --greyblue: #414e5f;
-  --tan:#aeae9d;
+  /* --grey: #c0c0d0; */
+  /* --lightgrey: #7e8691; */
+  /* --darkgrey: #44454c; */
+  /* --black: #232323; */
+  /* --white: #bebcbe; */
+  /* --greyblue: #3a4656; */
+  /* --greyblue: #414e5f; */
+  /* --tan:#aeae9d; */
 
   /* -------- SECOND THEME -------- */
-  --grey: #232b36;
-  /* --grey: #262b32; */
-  --blue: #414f5f;
-  --blue: #6f7a88;
-  --white: #f6fafb;
-  --cement: #a1a19e;
+  /* --grey: #232b36; */
+  /* /1* --grey: #262b32; *1/ */
+  /* --blue: #414f5f; */
+  /* --blue: #6f7a88; */
+  /* --white: #f6fafb; */
+  /* --cement: #a1a19e; */
 
   /* -------- THIRD THEME -------- */
   --grey: #191a1c;
-  --white: #eceded;
+  --greywhite: #7e8691;
   --white: #d6dada;
   --cement: #a1a19e;
   --wet-cement: #b6b4af;
   --olive: #4f4b3d;
-  /* --olive: #8c8c73; */
+  /* --blue: #abc3db; */
+  /* --blue: #6bb7df; */
+  --yellow: #fc9321;
+}
+
+::selection { 
+  background: var(--yellow);
+  color: var(--black);
 }
 
 * {
@@ -58,35 +65,35 @@ body {
   justify-content: center;
 }
 
-/* .noise-bg { */
-/*   position: fixed; */
-/*   top: -50%; */
-/*   left: -50%; */
-/*   right: -50%; */
-/*   bottom: -50%; */
-/*   width: 200%; */
-/*   height: 200vh; */
-/*   background: transparent url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclojure2d.github.io%2Fclojure2d%2Fdocs%2Fimages%2Foverlays%2Fnoise.png&f=1&nofb=1&ipt=d782e8dc396cc1a612d0be8bed505689aecd9c554a442bc1e7f4788542069170&ipo=images') repeat 0 0; */
-/*   background-repeat: repeat; */
-/*   animation: bg-animation 1.5s infinite; */
-/*   opacity: .26; */
-/*   visibility: visible; */
-/*   z-index: -1; */
-/* } */
+.noise-bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclojure2d.github.io%2Fclojure2d%2Fdocs%2Fimages%2Foverlays%2Fnoise.png&f=1&nofb=1&ipt=d782e8dc396cc1a612d0be8bed505689aecd9c554a442bc1e7f4788542069170&ipo=images') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 1.5s infinite;
+  opacity: .26;
+  visibility: visible;
+  z-index: -1;
+}
 
-/* @keyframes bg-animation { */
-/*   0% { transform: translate(0,0) } */
-/*   10% { transform: translate(-5%,-5%) } */
-/*   20% { transform: translate(-10%,5%) } */
-/*   30% { transform: translate(5%,-10%) } */
-/*   40% { transform: translate(-5%,15%) } */
-/*   50% { transform: translate(-10%,5%) } */
-/*   60% { transform: translate(15%,0) } */
-/*   70% { transform: translate(0,10%) } */
-/*   80% { transform: translate(-15%,0) } */
-/*   90% { transform: translate(10%,5%) } */
-/*   100% { transform: translate(5%,0) } */
-/* } */
+@keyframes bg-animation {
+  0% { transform: translate(0,0) }
+  10% { transform: translate(-5%,-5%) }
+  20% { transform: translate(-10%,5%) }
+  30% { transform: translate(5%,-10%) }
+  40% { transform: translate(-5%,15%) }
+  50% { transform: translate(-10%,5%) }
+  60% { transform: translate(15%,0) }
+  70% { transform: translate(0,10%) }
+  80% { transform: translate(-15%,0) }
+  90% { transform: translate(10%,5%) }
+  100% { transform: translate(5%,0) }
+}
 
 
 /* ############################################## */
@@ -121,11 +128,13 @@ body {
   font-weight: bold;
   font-size: 110px;
   color: var(--white);
+  color: var(--wet-cement);
   text-transform: uppercase;
 }
 
 #profession {
   color: var(--white);
+  color: var(--wet-cement);
   font-weight: bold;
 }
 
@@ -298,3 +307,121 @@ body {
 /* .project-title:hover { */
 /*   color: var(--white); */
 /* } */
+
+
+/* ######################################################### */
+/* PROJECT PAGE */
+/* ######################################################### */
+.project-info-landing-page {
+  /* background: var(--greywhite); */
+  width: 100vw;
+  height: 100vh;
+}
+
+.project-info-title-container {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  height: 100vh;
+  max-width: 200px;
+  overflow: hidden;
+  /* background: var(--olive); */
+
+  /* display: flex; */
+  /* align-items: end; */
+}
+
+.scrolling-text {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+  white-space: nowrap;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+#project-info-title {
+  width: 100%;
+  color: var(--grey);
+  font-size: 180px;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+  white-space: nowrap;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 60px;
+  left: 55%;
+  width: 15px;
+  height: 15px;
+  /* background: white; */
+  transform: translate(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* border-bottom: 2px dashed var(--grey); */
+  /* border-right: 2px dashed var(--grey); */
+  /* border-bottom: 2px dashed var(--white); */
+  /* border-right: 2px dashed var(--white); */
+  border-bottom: 2px solid var(--grey);
+  border-right: 2px solid var(--grey);
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+}
+
+.scrolldown span:nth-child(1) {
+  transform: translate(-15px,-15px);
+  animation-delay: -0.4s;
+}
+
+.scrolldown span:nth-child(2) {
+  transform: translate(0,0);
+  animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3) {
+  transform: translate(15px,15px);
+  animation-delay: 0s;
+}
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25% {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  50%, 100% {
+    top: 5px;
+    left: 5px;
+    opacity: 0;
+  }
+}
+
+.project-info-content {
+  margin: 5em;
+}
+
+#gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #FE6860; 
+  --gradient-color-2: #FE8A71; 
+  --gradient-color-3: #D9BBAE;  
+  --gradient-color-4: #F3C9BF;
+}

@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/NavBar'
-import Home from './components/Home'
-import Project from './components/Project'
-import './App.css'
+import Navbar from './components/NavBar';
+import Home from './components/Home';
+import Project from './components/Project';
+import Error from './components/Error';
+import './App.css';
 
 export default function App() {
   const createApp = () => {
@@ -12,7 +13,8 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/project" element={<Project/>}/>
+          <Route exact path="/project" element={<Project/>}/>
+          <Route path="*" element={<Error/>}/>"
         </Routes>
       </BrowserRouter>
     )

@@ -5,7 +5,6 @@ export default function Home() {
   const createHomePage = () => {
     return (
       <>
-        <div className="noise-bg"></div>
         <div className="content">
 
           <div className="introduction-container">
