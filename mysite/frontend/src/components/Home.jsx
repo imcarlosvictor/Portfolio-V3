@@ -3,6 +3,19 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const createHomePage = () => {
+    // Scrollbar progress
+    let progressBar = document.querySelector(".progress-bar");
+    function updateProgressBar() {
+      progressBar.style.height = `${getScrollPercentage()}%`
+      requestAnimationFrame(updateProgressBar)
+    }
+
+    function getScrollPercentage() {
+      return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)
+    }
+
+    updateProgressBar()
+
     return (
       <>
         <div className="content">
@@ -113,10 +126,15 @@ export default function Home() {
           </div>
 
         </div>
+
+        <div className="progress-section">
+          <div className="progress-bar-wrap">
+            <div className="progress-bar"></div>
+          </div>
+          <div className="progress-num"></div>
+        </div>
       </>
     )
-    
-
   }
 
   return (

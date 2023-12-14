@@ -1,14 +1,29 @@
 import { useNavigate } from 'react-router-dom';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { Gradient } from './Gradient.js'
 
 
 export default function Project() {
-    const createProjectPage = () => {
+    useEffect( () => {
+        // Scrollbar progress
+        let progressBar = document.querySelector(".progress-bar");
+        function updateProgressBar() {
+          progressBar.style.height = `${getScrollPercentage()}%`
+          requestAnimationFrame(updateProgressBar)
+        }
+
+        function getScrollPercentage() {
+          return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)
+        }
+        updateProgressBar()
+        
         // Create instance
         const gradient = new Gradient()
         // Call 'initGradient' with the selector to your canvas
         gradient.initGradient('#gradient-canvas')
+    })
+
+    const createProjectPage = () => {
 
         return (
           <>
@@ -39,6 +54,13 @@ export default function Project() {
 
         Eu tincidunt tortor aliquam nulla facilisi. Est sit amet facilisis magna etiam. Ultricies leo integer malesuada nunc vel risus commodo viverra maecenas. Malesuada proin libero nunc consequat interdum varius sit amet mattis. Enim nunc faucibus a pellentesque sit amet porttitor eget. Elementum tempus egestas sed sed. Risus nec feugiat in fermentum posuere urna nec. Erat imperdiet sed euismod nisi porta lorem mollis. Nisl purus in mollis nunc sed id semper. In ante metus dictum at. Condimentum id venenatis a condimentum vitae sapien. Id aliquet risus feugiat in ante metus dictum. Iaculis at erat pellentesque adipiscing commodo elit. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor.
                 </p>
+            </div>
+
+            <div className="progress-section">
+              <div className="progress-bar-wrap">
+                <div className="progress-bar"></div>
+              </div>
+              <div className="progress-num"></div>
             </div>
           </>
         )
