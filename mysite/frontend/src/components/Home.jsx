@@ -65,8 +65,21 @@ export default function Home() {
           </div>
 
           <div className="project-container">
+            <img src="../assets/jigar-panchal-5TUNYgPMEaU-unsplash.jpg" alt="iamge" />
             <div className="section-headers" id="project-header">
               <p>// Projects</p>
+            </div>
+
+            <div className="gallery-content-container">
+
+              <div className="indicator"></div>
+              <div className="gallery">
+                <div className="gallery-item">
+                  <img src="../assets/jigar-panchal-5TUNYgPMEaU-unsplash.jpg" alt="" />
+                  <p>Hello</p>
+                </div>
+              </div>
+
             </div>
 
             <div className="project-content">
