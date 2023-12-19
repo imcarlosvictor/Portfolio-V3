@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar';
 import Home from './components/Home';
+import About from './components/About';
 import Project from './components/Project';
 import Error from './components/Error';
 import './App.css';
@@ -13,6 +14,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
           <Route exact path="/project" element={<Project/>}/>
           <Route path="*" element={<Error/>}/>"
         </Routes>

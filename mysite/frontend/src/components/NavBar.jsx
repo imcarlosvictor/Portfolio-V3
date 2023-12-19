@@ -11,7 +11,7 @@ export default function Navbar() {
 
           <div className="socials">
 
-            <a href="https://www.linkedin.com/in/imcarlosvictor/" target="_blank" rel="noopener noreferrer" className="social-links">
+            <a href="/about" className="social-links">
               <i className="fa-solid fa-person-falling fa-1x"></i>
             </a>
             <a href="https://www.linkedin.com/in/imcarlosvictor/" target="_blank" rel="noopener noreferrer" className="social-links">
