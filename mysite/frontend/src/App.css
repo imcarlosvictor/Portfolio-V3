@@ -1,8 +1,4 @@
 :root {
-  /* --grey: #828e9c; */
-  /* --grey: #e5e3e6; */
-  /* --grey: #bcc5c3; */
-
   /* -------- ORIGINAL -------- */
   /* --grey: #c0c0d0; */
   /* --lightgrey: #7e8691; */
@@ -294,16 +290,24 @@ body::-webkit-scrollbar {
   overflow: hidden;
 }
 
+/* .project-image { */
+/*   position: absolute; */
+/*   top: 50%; */
+/*   right: 10%; */
+/*   width: 40%; */
+/*   height: 50%; */
+/* } */
+
 .project-image {
   position: absolute;
   top: 50%;
   right: 10%;
   transform: translate(0%, -50%);
-  width: 300px;
-  height: 300px;
+  width: 40%;
+  height: 100%;
 }
 
-.project-image img {
+.project-image iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -331,7 +335,7 @@ body::-webkit-scrollbar {
 
 .menu a {
   text-decoration: none;
-  font-size: 5em;
+  font-size: 4.8em;
   letter-spacing: -0.2rem;
   color: var(--lightgrey);
   transition: all .3d ease-in-out;
@@ -339,7 +343,7 @@ body::-webkit-scrollbar {
 
 .menu a:hover {
   color: var(--black);
-  font-size: 6em;
+  font-size: 5em;
 }
 
 
@@ -465,7 +469,7 @@ body::-webkit-scrollbar {
 
 #project-info-title {
   width: 100%;
-  color: var(--grey);
+  color: var(--black);
   font-size: 180px;
   text-transform: uppercase;
   transform: rotate(270deg);
@@ -494,8 +498,8 @@ body::-webkit-scrollbar {
   /* border-right: 2px dashed var(--grey); */
   /* border-bottom: 2px dashed var(--white); */
   /* border-right: 2px dashed var(--white); */
-  border-bottom: 2px solid var(--grey);
-  border-right: 2px solid var(--grey);
+  border-bottom: 2px solid var(--black);
+  border-right: 2px solid var(--black);
   animation: animate 1.5s linear infinite;
   opacity: 0;
 }
@@ -550,18 +554,18 @@ body::-webkit-scrollbar {
   /* --gradient-color-3: #f65507; */  
   /* --gradient-color-4: #f5c006; */
 
-  /* --gradient-color-1: #262280; */ 
-  /* --gradient-color-2: #504fa1; */ 
-  /* --gradient-color-3: #99979d; */  
-  /* --gradient-color-4: #f2eff8; */
+  --gradient-color-1: #7353ba;
+  --gradient-color-2: #504fa1; 
+  --gradient-color-3: #efc3f5;
+  --gradient-color-4: #f2eff8;
 
   /* --gradient-color-1: #414f5f; */
   /* --gradient-color-2: #6f7a88; */
   /* --gradient-color-3: #a1a19e; */
   /* --gradient-color-4: #f6fafb; */
 
-  --gradient-color-1: #faa6ff;
-  --gradient-color-2: #7353ba;
-  --gradient-color-3: #efc3f5;
-  --gradient-color-4: #f6fafb;
+  /* --gradient-color-1: #faa6ff; */
+  /* --gradient-color-2: #7353ba; */
+  /* --gradient-color-3: #efc3f5; */
+  /* --gradient-color-4: #f6fafb; */
 }

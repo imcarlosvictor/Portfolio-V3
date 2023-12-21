@@ -1,4 +1,6 @@
-import { useEffect } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -21,7 +23,6 @@ export default function Home() {
       return start * (1 - t) + end * t;
     }
 
-    // const projectLinksContainer = document.getElementsByClassName("project-link-container");
     const projectLinksContainer = document.querySelector(".project-link-container");
     let currentScroll = 0;
     let targetScroll = 0;
@@ -37,8 +38,33 @@ export default function Home() {
       projectLinksContainer.style.transform = `translateY(${currentScroll}px)`;
       requestAnimationFrame(animate);
     }
-
     animate();
+
+  })
+
+  useGSAP( () => {
+    // Project Images
+    let currentImageID = 1;
+    document.querySelectorAll(".project-link a").forEach((link) => {
+      link.addEventListener("mouseenter", function() {
+        const targetImageID = parseInt(this.getAttribute("data-image"));
+
+        const imageContainer = document.querySelector(".project-image");
+        const images = document.querySelectorAll(".image");
+
+        gsap.set(images, {
+          zIndex: 0,
+          opacity: 0,
+          delay: 0.25,
+        })
+        gsap.set(`.project-image iframe[data-id="${targetImageID}"]`, {
+          zIndex: 0,
+          opacity: 1,
+          delay: 0.25,
+        });
+        currentImageID = targetImageID;
+      })
+    });
   })
 
   const createHomePage = () => {
@@ -49,9 +75,17 @@ export default function Home() {
           <div className="project-container">
             <div className="project-content">
               <div className="menu">
+
                 <div className="project-image">
-                  <p>HEllo</p>
-                  <img src="../assets/jigar-panchal-5TUNYgPMEaU-unsplash.jpg" />
+                  <iframe className="image" data-id="1" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="2" src='https://my.spline.design/miniroomartcopy-346d32b6b8167de57d38369b7c8cbebc/' frameborder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="3" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="4" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="5" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="6" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="7" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="8" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="9" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
                 </div>
 
                 <div className="project-link-container">
@@ -60,35 +94,35 @@ export default function Home() {
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Unified Fugitive Database</a>
+                    <a href="#" data-image="2">Unified Fugitive Database</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Pathfinding Algorithm Visualizer</a>
+                    <a href="#" data-image="3">Pathfinding Algorithm Visualizer</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Car Rentals</a>
+                    <a href="#" data-image="4">Car Rentals</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Weather Forecast</a>
+                    <a href="#" data-image="5">Weather Forecast</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">GPU Price Scraper</a>
+                    <a href="#" data-image="6">GPU Price Scraper</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Stock Scraper</a>
+                    <a href="#" data-image="7">Stock Scraper</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Student Database Management System</a>
+                    <a href="#" data-image="8">Student Database Management System</a>
                   </div>
 
                   <div className="project-link">
-                    <a href="#" data-image="1">Adam Williamson Portfolio</a>
+                    <a href="#" data-image="9">Adam Williamson Portfolio</a>
                   </div>
                 </div>
 
