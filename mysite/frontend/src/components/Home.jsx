@@ -55,12 +55,12 @@ export default function Home() {
         gsap.set(images, {
           zIndex: 0,
           opacity: 0,
-          delay: 0.25,
+          delay: 0.20,
         })
         gsap.set(`.project-image iframe[data-id="${targetImageID}"]`, {
           zIndex: 0,
           opacity: 1,
-          delay: 0.25,
+          delay: 0.20,
         });
         currentImageID = targetImageID;
       })
