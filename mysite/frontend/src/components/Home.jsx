@@ -78,7 +78,7 @@ export default function Home() {
 
                 <div className="project-image">
                   <iframe className="image" data-id="1" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
-                  <iframe className="image" data-id="2" src='https://my.spline.design/miniroomartcopy-346d32b6b8167de57d38369b7c8cbebc/' frameborder='0' width='100%' height='100%'></iframe>
+                  <iframe className="image" data-id="2" src='https://my.spline.design/miniroomartcopy-346d32b6b8167de57d38369b7c8cbebc/' frameBorder='0' width='100%' height='100%'></iframe>
                   <iframe className="image" data-id="3" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
                   <iframe className="image" data-id="4" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>
                   <iframe className="image" data-id="5" src='https://my.spline.design/molang3dcopy-14f433a2bec08affba8c9f97c0afcb3c/' frameBorder='0' width='100%' height='100%'></iframe>

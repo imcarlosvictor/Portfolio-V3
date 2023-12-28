@@ -70,6 +70,8 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+
+
 .progress-section {
   position: fixed;
   right: -8px;
@@ -253,7 +255,8 @@ body::-webkit-scrollbar {
 }
 
 .skills p {
-  background: var(--lightgrey);
+  /* background: var(--lightgrey); */
+  background: rgba(164,164,164, .45);
   padding: .3em 1em;
   display: grid;
   justify-content: center;
