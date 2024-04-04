@@ -31,9 +31,7 @@
 }
 
 ::selection { 
-  /* background: var(--carolina-blue); */
-  /* background: var(--yellow); */
-  background: var(--green);
+  background: var(--carolina-blue);
   color: var(--black);
 }
 
@@ -267,7 +265,7 @@ body::-webkit-scrollbar {
 }
 
 .project-category {
-  background: pink;
+  /* background: pink; */
   width: 100%;
 }
 
@@ -422,7 +420,7 @@ body::-webkit-scrollbar {
 
 .project-overview {
   width: 100vw;
-  padding: 12em 5em;
+  padding: 12em 7em;
 }
 
 .project-title p {
@@ -453,6 +451,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: end;
   margin-right: 4em;
+  letter-spacing: -1.5px;
 }
 
 .project-overview-title p {
