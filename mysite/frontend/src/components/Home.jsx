@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import * as d3 from "d3";
 import { useGSAP } from '@gsap/react';
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';

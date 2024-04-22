@@ -37,12 +37,78 @@ export default function Project() {
                   </div>
                 </div>
 
-                <div className="scrolldown">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                <div className="project-quick-info">
+                  <div className="project-quick-info-container">
+                    <div className="project-quick-info-title">
+                      <p>release</p>
+                      <p>release</p>
+                      <p>release</p>
+                      <p>release</p>
+                      <p>release</p>
+                    </div>
+                    <div className="project-quick-info-content">
+                      <p>content</p>
+                      <p>content</p>
+                      <p>content</p>
+                      <p>content</p>
+                      <p>content</p>
+                    </div>
+                  </div>
                 </div>
 
+                {/* <div className="scrolldown"> */}
+                {/*   <span></span> */}
+                {/*   <span></span> */}
+                {/*   <span></span> */}
+                {/* </div> */}
+
+                <div className="banner">
+                  <div className="banner-text">
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering <span className="text-divider">• </span>
+                    Data Engineering
+                  </div>
+                </div>
               </div>
 
 
