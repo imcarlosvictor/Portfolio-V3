@@ -78,6 +78,8 @@ export default function Project() {
                     Data Engineering <span className="text-divider">• </span>
                     Data Engineering <span className="text-divider">• </span>
                     Data Engineering <span className="text-divider">• </span>
+                  </div>
+                  <div className="banner-text">
                     Data Engineering <span className="text-divider">• </span>
                     Data Engineering <span className="text-divider">• </span>
                     Data Engineering <span className="text-divider">• </span>
@@ -92,21 +94,6 @@ export default function Project() {
                     Data Engineering <span className="text-divider">• </span>
                     Data Engineering <span className="text-divider">• </span>
                     Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering <span className="text-divider">• </span>
-                    Data Engineering
                   </div>
                 </div>
               </div>

@@ -430,24 +430,31 @@ body::-webkit-scrollbar {
   font-size: 13px;
 }
 
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 .banner {
   width: 100%;
-  height: 30px; /* Adjust height as needed */
-  overflow: hidden;
-  top: -2em;
+  height: 30px; 
   position: relative;
+  top: -2em;
+  overflow: hidden;
+  white-space: nowrap;
   background-color: rgba(0,0,0,0);
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
   color: var(--black);
-  display: grid;
-  align-items: center;
 }
 
 .banner-text {
-  position: absolute;
-  white-space: nowrap;
-  animation: 50s scroll infinite linear; /* Adjust animation duration as needed */
+  display: inline-block;
+  animation: 25s slide infinite linear; /* Adjust animation duration as needed */
   font-size: 11px;
   text-transform: uppercase;
   color: var(--black);
