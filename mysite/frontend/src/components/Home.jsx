@@ -1,87 +1,70 @@
 import gsap from 'gsap';
-import * as d3 from "d3";
-import { useGSAP } from '@gsap/react';
-import { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import ForceGraph3D from 'react-force-graph-3d';
+import { createRoot } from "react-dom/client";
+// import { useGSAP } from '@gsap/react';
+import { useEffect, useRef, useCallback, useState } from 'react';
+
+import graphData from '../assets/datasets/miserables.json';
 
 
 export default function Home() {
+  const [graphDataState, setGraphDataState] = useState(null);
+  
   useEffect( () => {
-    // Scrollbar progress
-    // let progressBar = document.querySelector(".progress-bar");
-    // function updateProgressBar() {
-    //   progressBar.style.height = `${getScrollPercentage()}%`
-    //   requestAnimationFrame(updateProgressBar)
-    // }
+    console.log(graphData);
+    // Force Graph Visualizer
+    const fetchData = async () => {
+      const response = await fetch('../assets/datasets/miserables.json');
+      const data = await response.json();
+      setGraphDataState(data);
+    };
 
-    // function getScrollPercentage() {
-    //   return ((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100)
-    // }
-    // updateProgressBar()
+    fetchData();
+  }, []);
 
-    // Project Links
-    function lerp(start, end, t) {
-      return start * (1 - t) + end * t;
-    }
+  const FocusGraph = () => {
+    const fgRef = useRef();
 
-    const projectLinksContainer = document.querySelector(".project-link-container");
-    let currentScroll = 0;
-    let targetScroll = 0;
-    const ease = 0.1;
+    const handleClick = useCallback(node => {
+      // Aim at node from outside it
+      const distance = 40;
+      const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
 
-    document.addEventListener("mousemove", (e) => {
-      const extraHeight = projectLinksContainer.offsetHeight - window.innerHeight;
-      targetScroll = (e.clientY / window.innerHeight) * -extraHeight;
-    });
+      fgRef.current.cameraPosition(
+        { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio  }, // new position
+        node, // lookAt ({ x, y, z  })
+        3000  // ms transition duration
+      );
+    }, []);
 
-    function animate() {
-      currentScroll = lerp(currentScroll, targetScroll, ease);
-      projectLinksContainer.style.transform = `translateY(${currentScroll}px)`;
-      requestAnimationFrame(animate);
-    }
-    animate();
+    return (
+      <ForceGraph3D
+        ref={fgRef}
+        graphData={graphData}
+        nodeLabel="id"
+        nodeAutoColorBy="group"
+        onNodeClick={handleClick}
+      />
+    );
+  };
 
-  })
-
-  useGSAP( () => {
-    // Project Images
-    let currentImageID = 1;
-    document.querySelectorAll(".project-link a").forEach((link) => {
-      link.addEventListener("mouseenter", function() {
-        const targetImageID = parseInt(this.getAttribute("data-image"));
-
-        const imageContainer = document.querySelector(".project-image");
-        const images = document.querySelectorAll(".image");
-
-        gsap.set(images, {
-          zIndex: 0,
-          opacity: 0,
-          delay: 0.20,
-        })
-        gsap.set(`.project-image iframe[data-id="${targetImageID}"]`, {
-          zIndex: 0,
-          opacity: 1,
-          delay: 0.20,
-        });
-        currentImageID = targetImageID;
-      })
-    });
-  })
+  useEffect(() => {
+    const root = createRoot(document.getElementById('graph'));
+    root.render(<FocusGraph />);
+  }, [graphDataState]);
 
   const createHomePage = () => {
     return (
       <>
-        <div className="content">
+        <div className="content" id="content">
+          <div className="project-container" id="project-container">
 
-          <div className="project-container">
+            <div className="graph" id="graph"></div>
+
             <div className="project-category">
-              <div className="category-block">
-                <p>AI</p>
-              </div>
-              <div className="category-block">
-                <p>Data</p>
-              </div>
             </div>
+            {/* Delete??? */}
             <div className="project-link-container">
               <div className="project-block">
                 <div className="project-poster">
@@ -97,7 +80,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* <div className="progress-section"> */}
@@ -116,3 +98,4 @@ export default function Home() {
     </>
   )
 }
+
