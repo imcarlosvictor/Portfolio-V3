@@ -1,26 +1,28 @@
 :root {
   /* -------- ORIGINAL -------- */
   --white: #dddddd;
-  /* --white: #e4dfda; */
-  --black: #131313;
+  --black: #101010;
   --grey: #1e1d1e;
-  /* --lightgrey: #737374; */
+  --special: #1f3037;
   --lightgrey: #525252;
   --darkgrey: #222222;
   --cool-grey: #7e8aa2;
   --charcoal: #202328;
   --yellow: #fc9321;
   --green: #5ff501;
-  /* --carolina-blue: #6bb6fa; */
   --carolina-blue: #4b9cd3;
+  /* --black: #131313; */
+  /* --white: #e4dfda; */
   /* --grey: #aeb5c0; */
   /* --grey: #cecece; */
+  /* --lightgrey: #737374; */
   /* --darkgrey: #4b4b4b; */
   /* --greyblue: #3a4656; */
   /* --greyblue: #414e5f; */
   /* --greyblue: #1e2225; */
   /* --olive: #3f4a39; */
   /* --tan:#aeae9d; */
+  /* --carolina-blue: #6bb6fa; */
 }
 
 * {
@@ -36,6 +38,9 @@
 ::selection { 
   background: var(--carolina-blue);
   color: var(--black);
+  background: var(--special);
+  color: var(--cool-grey);
+  /* color: var(--white); */
 }
 
 body {
@@ -308,6 +313,7 @@ body::-webkit-scrollbar {
   display: grid;
   justify-content: center;
   width: 92vw;
+  width: 100vw;
   height: 100vh;
 }
 

@@ -1,0 +1,21 @@
+{
+  "nodes": [
+    {"id": "Software Engineering"},
+    {"id": "Data Engineering"},
+    {"id": "Web Application"},
+    {"id": "Algorithms"},
+    {"id": "Car Rental App"},
+    {"id": "Weather Forecast App"},
+    {"id": "Pathfinder Algorithm Visualizer"},
+    {"id": "Unified Fugitive Database"}
+  ],
+  "links": [
+    {"source": "Data Engineering", "target": "Software Engineering"},
+    {"source": "Web Application", "target": "Software Engineering"},
+    {"source": "Algorithms", "target": "Software Engineering"},
+    {"source": "Car Rental App", "target": "Web Application"},
+    {"source": "Weather Forecast App", "target": "Web Application"},
+    {"source": "Pathfinder Algorithm Visualizer", "target": "Algorithms"},
+    {"source": "Unified Fugitive Database", "target": "Data Engineering"}
+  ]
+}
