@@ -1,16 +1,16 @@
 {
   "nodes": [
-    {"id": "Software Engineering"},
-    {"id": "Data Engineering"},
-    {"id": "Web Application"},
-    {"id": "Algorithms"},
-    {"id": "Car Rental App"},
-    {"id": "Weather Forecast App"},
-    {"id": "Pathfinder Algorithm Visualizer"},
-    {"id": "Unified Fugitive Database"}
+    {"id": "Software Engineering", "neighbors": [], "links": []},
+    {"id": "Data Engineering", "neighbors": [], "links": []},
+    {"id": "Web Application", "neighbors": [], "links": []},
+    {"id": "Algorithms", "neighbors": [], "links": []},
+    {"id": "Car Rental App", "neighbors": [], "links": []},
+    {"id": "Weather Forecast App", "neighbors": [], "links": []},
+    {"id": "Pathfinder Algorithm Visualizer", "neighbors": [], "links": []},
+    {"id": "Unified Fugitive Database", "neighbors": [], "links": []}
   ],
   "links": [
-    {"source": "Data Engineering", "target": "Software Engineering"},
+    {"source": "Data Engineering", "target": "Software Engineering" },
     {"source": "Web Application", "target": "Software Engineering"},
     {"source": "Algorithms", "target": "Software Engineering"},
     {"source": "Car Rental App", "target": "Web Application"},

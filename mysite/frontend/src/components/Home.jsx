@@ -1,88 +1,102 @@
-import React, { useEffect, useState, useMemo  } from 'react';
-import ForceGraph3D from 'react-force-graph-3d';
-import graphData from '../assets/datasets/projects.json';
-
-
+import React, { useEffect, useState, useMemo  } from "react";
+import ForceGraph3D from "react-force-graph-3d";
+import graphData from "../assets/datasets/projects.json";
+// import graphData from '../assets/datasets/del.json';
 
 export default function Home() {
-  const [highlightNodes, setHighlightNodes] = useState(new Set());
-  const [highlightLinks, setHighlightLinks] = useState(new Set());
-  const hoverNodeRef = React.useRef(null);
-  // const [gData, setGData] = useState(null);
+  // const [highlightNodes, setHighlightNodes] = useState(new Set());
+  // const [highlightLinks, setHighlightLinks] = useState(new Set());
+  // const hoverNodeRef = React.useRef(null);
+  const data = React.useRef(null);
 
-  useEffect(() => {
-    const N = 80;
-    const data = {
-      nodes: [...Array(N).keys()].map(i => ({ id: i  })),
-      links: [...Array(N).keys()]
-      .filter(id => id)
-      .map(id => ({
-        source: id,
-        target: Math.round(Math.random() * (id - 1))
-      }))
-    };
+  const hoverNode = React.useRef(null);
 
-    data.links.forEach(link => {
-      const a = data.nodes[link.source];
-      const b = data.nodes[link.target];
-      !a.neighbors && (a.neighbors = []);
-      !b.neighbors && (b.neighbors = []);
-      a.neighbors.push(b);
-      b.neighbors.push(a);
+  const updateData = () => {
+    if (graphData && graphData.nodes && graphData.links) {
+      const updatedNodes = graphData.nodes.map(node => ({ ...node, neighbors: [], links: []  }));
 
-      !a.links && (a.links = []);
-      !b.links && (b.links = []);
-      a.links.push(link);
-      b.links.push(link);
-    });
+      graphData.links.forEach(link => {
+        const a = updatedNodes.find(node => node.id === link.source);
+        const b = updatedNodes.find(node => node.id === link.target);
+        if (a && b) {
+          a.neighbors.push(b);
+          b.neighbors.push(a);
+          a.links.push(link);
+          b.links.push(link);
+        }
+      });
 
-    // setGData(data);
-  }, []);
+    data.current = {"nodes": updatedNodes, "links": graphData.links};
+    }
+    console.log(data);
+  }
 
   const memoizedGraph = useMemo(() => {
+    updateData();
+
+    const highlightNodes = new Set();
+    const highlightLinks = new Set();
+
+    const updateHighlight = () => {
+      // trigger update of highlighted objects in scene
+      const Graph = ForceGraph3D();
+      Graph(document.getElementById('3D-graph'))
+        .graphData(data.current)
+        .nodeColor(node => highlightNodes.has(node) ? node === hoverNode ? 'rgb(255,0,0,1)' : 'rgba(255,160,0,0.8)' : 'rgba(0,255,255,0.6)')
+        .linkWidth(link => highlightLinks.has(link) ? 4 : 1)
+        .linkdirectionalparticles(link => highlightLinks.has(link) ? 4 : 0)
+      
+      
+      Graph
+        .nodecolor(Graph.nodecolor())
+        .linkwidth(Graph.linkwidth())
+        .linkdirectionalparticles(Graph.linkdirectionalparticles());
+    }
+
     return (
       <ForceGraph3D
-        graphData={graphData}
+        graphData={data.current}
         nodeLabel="id"
         nodeColor={node =>
             highlightNodes.has(node)
-              ? node === hoverNodeRef.current
-                ? 'rgba(255,0,0,1)'
-                : 'rgba(255,160,0,0.8)'
-                : 'rgba(0,255,255,0.6)'
+              ? node === hoverNode.current
+                ? 'rgba(40, 130, 138, 1)'
+                : 'rgba(40, 130, 138, 0.6)'
+                : 'rgba(255, 255, 255, 1)'
         }
-        linkWidth={link => (highlightLinks.has(link) ? 4 : 1)}
-        linkDirectionalParticles={link => (highlightLinks.has(link) ? 4 : 0)}
-        linkDirectionalParticleWidth={4}
+        linkWidth={link => (highlightLinks.has(link) ? 2 : 0.5)}
+        linkDirectionalParticles={link => (highlightLinks.has(link) ? 2 : 0)}
+        linkDirectionalParticleWidth={2}
         onNodeHover={node => {
-          if ((!node && !highlightNodes.size) || (node && hoverNodeRef.current === node)) return;
-          const newHighlightNodes = new Set();
-          const newHighlightLinks = new Set();
+          if ((!node && !highlightNodes.size) || (node && hoverNode.current === node)) return;
+          highlightNodes.clear();
+          highlightLinks.clear();
           if (node) {
-            newHighlightNodes.add(node);
-            node.neighbors.forEach(neighbor => newHighlightNodes.add(neighbor));
-            node.links.forEach(link => newHighlightLinks.add(link));
+            // console.log(node);
+            highlightNodes.add(node);
+            node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
+            node.links.forEach(link => highlightLinks.add(link));
           }
-          setHighlightNodes(newHighlightNodes);
-          setHighlightLinks(newHighlightLinks);
-          hoverNodeRef.current = node || null;
+          hoverNode.current = node || null;
+
+          updateHighlight();
         }}
         onLinkHover={link => {
-          const newHighlightNodes = new Set();
-          const newHighlightLinks = new Set();
+          highlightNodes.clear();
+          highlightLinks.clear();
           if (link) {
-            newHighlightLinks.add(link);
-            newHighlightNodes.add(link.source);
-            newHighlightNodes.add(link.target);
+            highlightLinks.add(link);
+            highlightNodes.add(link.source);
+            highlightNodes.add(link.target);
           }
-          setHighlightNodes(newHighlightNodes);
-          setHighlightLinks(newHighlightLinks);
+
+          updateHighlight();
         }}
         backgroundColor="#101010"
         linkOpacity={0.3}
       />
     );
-  }, [highlightNodes, highlightLinks]);
+  }, []);
 
   const createHomePage = () => {
     return (

@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "Software Engineering",
+      "neighbors": ["Data Engineering", "Web Application", "Algorithms"],
+      "links": [
+        {"source": "Data Engineering", "target": "Software Engineering"},
+        {"source": "Web Application", "target": "Software Engineering"},
+        {"source": "Algorithms", "target": "Software Engineering"}
+
+      ]
+
+    },
+    {
+      "id": "Data Engineering",
+      "neighbors": ["Software Engineering", "Unified Fugitive Database"],
+      "links": [
+        {"source": "Data Engineering", "target": "Software Engineering"},
+        {"source": "Unified Fugitive Database", "target": "Data Engineering"}
+
+      ]
+
+    },
+    {
+      "id": "Web Application",
+      "neighbors": ["Software Engineering", "Car Rental App", "Weather Forecast App"],
+      "links": [
+        {"source": "Web Application", "target": "Software Engineering"},
+        {"source": "Car Rental App", "target": "Web Application"},
+        {"source": "Weather Forecast App", "target": "Web Application"}
+
+      ]
+
+    },
+    {
+      "id": "Algorithms",
+      "neighbors": ["Software Engineering", "Pathfinder Algorithm Visualizer"],
+      "links": [
+        {"source": "Algorithms", "target": "Software Engineering"},
+        {"source": "Pathfinder Algorithm Visualizer", "target": "Algorithms"}
+
+      ]
+
+    },
+    {
+      "id": "Car Rental App",
+      "neighbors": ["Web Application"],
+      "links": [
+        {"source": "Car Rental App", "target": "Web Application"}
+
+      ]
+
+    },
+    {
+      "id": "Weather Forecast App",
+      "neighbors": ["Web Application"],
+      "links": [
+        {"source": "Weather Forecast App", "target": "Web Application"}
+
+      ]
+
+    },
+    {
+      "id": "Pathfinder Algorithm Visualizer",
+      "neighbors": ["Algorithms"],
+      "links": [
+        {"source": "Pathfinder Algorithm Visualizer", "target": "Algorithms"}
+
+      ]
+
+    },
+    {
+      "id": "Unified Fugitive Database",
+      "neighbors": ["Data Engineering"],
+      "links": [
+        {"source": "Unified Fugitive Database", "target": "Data Engineering"}
+
+      ]
+
+    }
+
+  ],
+  "links": [
+    {"source": "Data Engineering", "target": "Software Engineering"},
+    {"source": "Web Application", "target": "Software Engineering"},
+    {"source": "Algorithms", "target": "Software Engineering"},
+    {"source": "Car Rental App", "target": "Web Application"},
+    {"source": "Weather Forecast App", "target": "Web Application"},
+    {"source": "Pathfinder Algorithm Visualizer", "target": "Algorithms"},
+    {"source": "Unified Fugitive Database", "target": "Data Engineering"}
+
+  ]
+
+}
+
