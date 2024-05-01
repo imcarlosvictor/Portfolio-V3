@@ -1,17 +1,38 @@
 import React, { useEffect, useState, useMemo  } from "react";
 import ForceGraph3D from "react-force-graph-3d";
+// import ForceGraph3D from "react-force-graph";
 import graphData from "../assets/datasets/projects.json";
-// import graphData from '../assets/datasets/del.json';
+
+
+let gData = {};
+const updateData = () => {
+  if (graphData && graphData.nodes && graphData.links) {
+    const updatedNodes = graphData.nodes.map(node => ({ ...node, neighbors: [], links: []  }));
+
+    graphData.links.forEach(link => {
+      const a = updatedNodes.find(node => node.id === link.source);
+      const b = updatedNodes.find(node => node.id === link.target);
+      if (a && b) {
+        a.neighbors.push(b);
+        b.neighbors.push(a);
+        a.links.push(link);
+        b.links.push(link);
+      }
+    });
+  return {"nodes": updatedNodes, "links": graphData.links};
+  }
+}
+gData = updateData();
+console.log(gData);
+
 
 export default function Home() {
-  // const [highlightNodes, setHighlightNodes] = useState(new Set());
-  // const [highlightLinks, setHighlightLinks] = useState(new Set());
-  // const hoverNodeRef = React.useRef(null);
-  const data = React.useRef(null);
+  const [highlightNodes, setHighlightNodes] = useState(new Set());
+  const [highlightLinks, setHighlightLinks] = useState(new Set());
+  const [hoverNode, setHoverNode] = useState(null);
+  const gData = React.useRef(null);
 
-  const hoverNode = React.useRef(null);
-
-  const updateData = () => {
+  const updateData = useMemo(() => {
     if (graphData && graphData.nodes && graphData.links) {
       const updatedNodes = graphData.nodes.map(node => ({ ...node, neighbors: [], links: []  }));
 
@@ -25,60 +46,44 @@ export default function Home() {
           b.links.push(link);
         }
       });
-
-    data.current = {"nodes": updatedNodes, "links": graphData.links};
+    gData.current = {"nodes": updatedNodes, "links": graphData.links};
     }
-    console.log(data);
+  }, []);
+  
+  const updateHighlight = () => {
+    setHighlightNodes(highlightNodes);
+    setHighlightLinks(highlightLinks);
   }
 
-  const memoizedGraph = useMemo(() => {
-    updateData();
-
-    const highlightNodes = new Set();
-    const highlightLinks = new Set();
-
-    const updateHighlight = () => {
-      // trigger update of highlighted objects in scene
-      const Graph = ForceGraph3D();
-      Graph(document.getElementById('3D-graph'))
-        .graphData(data.current)
-        .nodeColor(node => highlightNodes.has(node) ? node === hoverNode ? 'rgb(255,0,0,1)' : 'rgba(255,160,0,0.8)' : 'rgba(0,255,255,0.6)')
-        .linkWidth(link => highlightLinks.has(link) ? 4 : 1)
-        .linkdirectionalparticles(link => highlightLinks.has(link) ? 4 : 0)
-      
-      
-      Graph
-        .nodecolor(Graph.nodecolor())
-        .linkwidth(Graph.linkwidth())
-        .linkdirectionalparticles(Graph.linkdirectionalparticles());
-    }
-
+  const projectGraph = useMemo(() => {
     return (
       <ForceGraph3D
-        graphData={data.current}
+        graphData={gData.current}
         nodeLabel="id"
-        nodeColor={node =>
+        nodeColor={node => 
             highlightNodes.has(node)
-              ? node === hoverNode.current
-                ? 'rgba(40, 130, 138, 1)'
-                : 'rgba(40, 130, 138, 0.6)'
-                : 'rgba(255, 255, 255, 1)'
+              ? node === hoverNode
+                ? '#37BECB'
+                : '#325DCD'
+                : '#ffffff'
         }
         linkWidth={link => (highlightLinks.has(link) ? 2 : 0.5)}
         linkDirectionalParticles={link => (highlightLinks.has(link) ? 2 : 0)}
         linkDirectionalParticleWidth={2}
         onNodeHover={node => {
-          if ((!node && !highlightNodes.size) || (node && hoverNode.current === node)) return;
+          if ((!node && !highlightNodes.size) || (node && hoverNode === node)) return;
+          console.log(node);
+          console.log(highlightNodes);
+          console.log(highlightLinks);
           highlightNodes.clear();
           highlightLinks.clear();
           if (node) {
-            // console.log(node);
             highlightNodes.add(node);
             node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
             node.links.forEach(link => highlightLinks.add(link));
+            setHoverNode(node);
           }
-          hoverNode.current = node || null;
-
+          // setHoverNode((node || null));
           updateHighlight();
         }}
         onLinkHover={link => {
@@ -96,14 +101,15 @@ export default function Home() {
         linkOpacity={0.3}
       />
     );
-  }, []);
+  }, [highlightNodes, highlightLinks, hoverNode]);
+
 
   const createHomePage = () => {
     return (
       <>
         <div className="content" id="content">
           <div className="project-container" id="project-container">
-            <div id="3D-graph">{memoizedGraph}</div>
+            <div id="3D-graph">{projectGraph}</div>
             <div className="project-category"></div>
             <div className="project-link-container">
               <div className="project-block">
