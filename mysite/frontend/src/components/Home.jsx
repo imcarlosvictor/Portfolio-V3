@@ -1,29 +1,7 @@
-import React, { useEffect, useState, useMemo  } from "react";
+import React, { useCallback, useState, useMemo  } from "react";
 import ForceGraph3D from "react-force-graph-3d";
 // import ForceGraph3D from "react-force-graph";
 import graphData from "../assets/datasets/projects.json";
-
-
-let gData = {};
-const updateData = () => {
-  if (graphData && graphData.nodes && graphData.links) {
-    const updatedNodes = graphData.nodes.map(node => ({ ...node, neighbors: [], links: []  }));
-
-    graphData.links.forEach(link => {
-      const a = updatedNodes.find(node => node.id === link.source);
-      const b = updatedNodes.find(node => node.id === link.target);
-      if (a && b) {
-        a.neighbors.push(b);
-        b.neighbors.push(a);
-        a.links.push(link);
-        b.links.push(link);
-      }
-    });
-  return {"nodes": updatedNodes, "links": graphData.links};
-  }
-}
-gData = updateData();
-console.log(gData);
 
 
 export default function Home() {
@@ -32,7 +10,7 @@ export default function Home() {
   const [hoverNode, setHoverNode] = useState(null);
   const gData = React.useRef(null);
 
-  const updateData = useMemo(() => {
+  useMemo(() => {
     if (graphData && graphData.nodes && graphData.links) {
       const updatedNodes = graphData.nodes.map(node => ({ ...node, neighbors: [], links: []  }));
 
@@ -50,10 +28,10 @@ export default function Home() {
     }
   }, []);
   
-  const updateHighlight = () => {
+  const updateHighlight = useCallback(() => {
     setHighlightNodes(highlightNodes);
     setHighlightLinks(highlightLinks);
-  }
+  }, [highlightNodes, highlightLinks])
 
   const projectGraph = useMemo(() => {
     return (
@@ -63,18 +41,15 @@ export default function Home() {
         nodeColor={node => 
             highlightNodes.has(node)
               ? node === hoverNode
-                ? '#37BECB'
-                : '#325DCD'
+                ? '#00ffff'
+                : '#ffffff'
                 : '#ffffff'
         }
-        linkWidth={link => (highlightLinks.has(link) ? 2 : 0.5)}
+        linkWidth={link => (highlightLinks.has(link) ? 1 : 0.5)}
         linkDirectionalParticles={link => (highlightLinks.has(link) ? 2 : 0)}
-        linkDirectionalParticleWidth={2}
+        linkDirectionalParticleWidth={1}
         onNodeHover={node => {
           if ((!node && !highlightNodes.size) || (node && hoverNode === node)) return;
-          console.log(node);
-          console.log(highlightNodes);
-          console.log(highlightLinks);
           highlightNodes.clear();
           highlightLinks.clear();
           if (node) {
@@ -101,7 +76,7 @@ export default function Home() {
         linkOpacity={0.3}
       />
     );
-  }, [highlightNodes, highlightLinks, hoverNode]);
+  }, [highlightNodes, highlightLinks, hoverNode, updateHighlight]);
 
 
   const createHomePage = () => {
