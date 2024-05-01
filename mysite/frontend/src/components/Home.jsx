@@ -2,6 +2,8 @@ import React, { useCallback, useState, useMemo  } from "react";
 import ForceGraph3D from "react-force-graph-3d";
 // import ForceGraph3D from "react-force-graph";
 import graphData from "../assets/datasets/projects.json";
+import { CSS2DRenderer, CSS2DObject } from 'https://unpkg.com/three@0.164.1/examples/jsm/renderers/CSS2DRenderer.js';
+
 
 
 export default function Home() {
@@ -41,7 +43,7 @@ export default function Home() {
         nodeColor={node => 
             highlightNodes.has(node)
               ? node === hoverNode
-                ? '#00ffff'
+                ? '#7e8aa2'
                 : '#ffffff'
                 : '#ffffff'
         }
@@ -69,11 +71,19 @@ export default function Home() {
             highlightNodes.add(link.source);
             highlightNodes.add(link.target);
           }
-
           updateHighlight();
         }}
         backgroundColor="#101010"
         linkOpacity={0.3}
+        extraRenderers={[new CSS2DRenderer()]}
+        nodeThreeObject={node => {
+          const nodeEl = document.createElement("div");
+          nodeEl.textContent = node.id;
+          nodeEl.style.color = "#888a85";
+          nodeEl.className = "node-label";
+          return new CSS2DObject(nodeEl);
+        }}
+        nodeThreeObjectExtend={true}
       />
     );
   }, [highlightNodes, highlightLinks, hoverNode, updateHighlight]);
