@@ -1,6 +1,6 @@
+import { useNavigate } from "react-router-dom";
 import React, { useCallback, useState, useMemo  } from "react";
 import ForceGraph3D from "react-force-graph-3d";
-// import ForceGraph3D from "react-force-graph";
 import graphData from "../assets/datasets/projects.json";
 import { CSS2DRenderer, CSS2DObject } from 'https://unpkg.com/three@0.164.1/examples/jsm/renderers/CSS2DRenderer.js';
 
@@ -38,15 +38,17 @@ export default function Home() {
   const projectGraph = useMemo(() => {
     return (
       <ForceGraph3D
+        showNavInfo={false}
         graphData={gData.current}
         nodeLabel="id"
         nodeColor={node => 
             highlightNodes.has(node)
               ? node === hoverNode
-                ? '#7e8aa2'
+                ? '#374a5b'
                 : '#ffffff'
                 : '#ffffff'
         }
+        nodeResolution={15}
         linkWidth={link => (highlightLinks.has(link) ? 1 : 0.5)}
         linkDirectionalParticles={link => (highlightLinks.has(link) ? 2 : 0)}
         linkDirectionalParticleWidth={1}
@@ -62,6 +64,11 @@ export default function Home() {
           }
           // setHoverNode((node || null));
           updateHighlight();
+        }}
+        onNodeClick={node => {
+          const url = node;
+          const navigate = useNavigate();
+          navigate("/projects");
         }}
         onLinkHover={link => {
           highlightNodes.clear();
@@ -84,6 +91,7 @@ export default function Home() {
           return new CSS2DObject(nodeEl);
         }}
         nodeThreeObjectExtend={true}
+        zoomToFit={[3,5]}
       />
     );
   }, [highlightNodes, highlightLinks, hoverNode, updateHighlight]);
