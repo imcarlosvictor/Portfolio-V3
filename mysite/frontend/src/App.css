@@ -1,30 +1,30 @@
 :root {
   /* -------- ORIGINAL -------- */
-  --white: #dddddd;
+  --white: #dfdedf;
   --black: #101010;
   --grey: #1e1d1e;
   --lightgrey: #525252;
   --darkgrey: #222222;
+  --titan-grey: #515455;
   --cool-grey: #7e8aa2;
   --charcoal: #202328;
-  --yellow: #fc9321;
   --green: #00d181;
-  --special: #2b9aa4;
-  --special: #7e8aa2;
-  --special: #374a5b;
-  /* --black: #131313; */
+
+  --special-orange: #fc8300;
+  --special-orange: #6ab0f5;
+  /* --special-orange: #fa973a; */
+  /* --special-orange-bg: #312621; */
+
+  --special-red: #fd6464;
+  --special-red-bg: #26171b;
+
+  /* --carolina-blue: #6ab0f5; */
+  /* --special: #2b9aa4; */
+  /* --white: #dddddd; */
   /* --white: #e4dfda; */
   /* --grey: #aeb5c0; */
   /* --grey: #cecece; */
-  /* --lightgrey: #737374; */
-  /* --darkgrey: #4b4b4b; */
-  /* --greyblue: #3a4656; */
-  /* --greyblue: #414e5f; */
-  /* --greyblue: #1e2225; */
-  /* --olive: #3f4a39; */
   /* --tan:#aeae9d; */
-  /* --carolina-blue: #6bb6fa; */
-  /* --carolina-blue: #4b9cd3; */
   /* --blue-purple: #651fff; */
 }
 
@@ -40,7 +40,7 @@
 
 ::selection { 
   /* background: var(--carolina-blue); */
-  background: var(--special);
+  background: var(--special-orange);
   /* background: var(--blue-purple); */
   color: var(--black);
 }
@@ -671,15 +671,15 @@ body::-webkit-scrollbar {
   /* --gradient-color-3: #f65507; */  
   /* --gradient-color-4: #f5c006; */
 
-  /* --gradient-color-1: #7353ba; */
-  /* --gradient-color-2: #504fa1; */ 
-  /* --gradient-color-3: #efc3f5; */
-  /* --gradient-color-4: #f2eff8; */
+  --gradient-color-1: #7353ba;
+  --gradient-color-2: #504fa1; 
+  --gradient-color-3: #efc3f5;
+  --gradient-color-4: #f2eff8;
 
-  --gradient-color-1: #414f5f;
-  --gradient-color-2: #6f7a88;
-  --gradient-color-3: #a1a19e;
-  --gradient-color-4: #f6fafb;
+  /* --gradient-color-1: #414f5f; */
+  /* --gradient-color-2: #6f7a88; */
+  /* --gradient-color-3: #a1a19e; */
+  /* --gradient-color-4: #f6fafb; */
 
   /* --gradient-color-1: #002ff4; */
   /* --gradient-color-2: #3d18d6; */ 
