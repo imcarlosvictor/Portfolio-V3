@@ -669,8 +669,8 @@ body::-webkit-scrollbar {
   --gradient-color-3: #7e55dd;
   --gradient-color-4: #9470fa;
 
-  --gradient-color-1: #256fa7; 
-  --gradient-color-2: #237fbc;
-  --gradient-color-3: #1c8fd1;
-  --gradient-color-4: #0d9fe7;
+  /* --gradient-color-1: #256fa7; */ 
+  /* --gradient-color-2: #237fbc; */
+  /* --gradient-color-3: #1c8fd1; */
+  /* --gradient-color-4: #0d9fe7; */
 }
