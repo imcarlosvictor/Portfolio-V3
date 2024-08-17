@@ -11,7 +11,6 @@
   --green: #00d181;
 
   --special-orange: #fc8300;
-  --special-orange: #6ab0f5;
   /* --special-orange: #fa973a; */
   /* --special-orange-bg: #312621; */
 
@@ -20,11 +19,6 @@
 
   /* --carolina-blue: #6ab0f5; */
   /* --special: #2b9aa4; */
-  /* --white: #dddddd; */
-  /* --white: #e4dfda; */
-  /* --grey: #aeb5c0; */
-  /* --grey: #cecece; */
-  /* --tan:#aeae9d; */
   /* --blue-purple: #651fff; */
 }
 
@@ -43,6 +37,7 @@
   background: var(--special-orange);
   /* background: var(--blue-purple); */
   color: var(--black);
+  /* color: var(--white); */
 }
 
 body {
@@ -469,16 +464,13 @@ body::-webkit-scrollbar {
 }
 
 .project-quick-info-title p {
-  color: var(--light-grey);
-  color: #536f8b;
-  color: #1f1f1f;
+  color: var(--white);
   margin: 1em 0;
   font-size: 13px;
 }
 
 .project-quick-info-content p {
-  color: var(--black);
-  color: black;
+  color: var(--white);
   margin: 1em 0;
   font-size: 13px;
 }
@@ -502,7 +494,7 @@ body::-webkit-scrollbar {
   background-color: rgba(0,0,0,0);
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
-  color: var(--black);
+  color: var(--white);
 }
 
 .banner-text {
@@ -510,12 +502,12 @@ body::-webkit-scrollbar {
   animation: 25s slide infinite linear; /* Adjust animation duration as needed */
   font-size: 11px;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--white);
 }
 
 .text-divider {
   padding: 0 1em;
-  color: var(--black);
+  color: var(--white);
 }
 
 @keyframes scroll {
@@ -666,35 +658,14 @@ body::-webkit-scrollbar {
   /* --gradient-color-3: #D9BBAE; */  
   /* --gradient-color-4: #F3C9BF; */
 
-  /* --gradient-color-1: #f78907; */ 
-  /* --gradient-color-2: #f6c507; */ 
-  /* --gradient-color-3: #f65507; */  
-  /* --gradient-color-4: #f5c006; */
 
-  --gradient-color-1: #7353ba;
-  --gradient-color-2: #504fa1; 
-  --gradient-color-3: #efc3f5;
-  --gradient-color-4: #f2eff8;
+  /* --gradient-color-1: #7353ba; */
+  /* --gradient-color-2: #504fa1; */ 
+  /* --gradient-color-3: #efc3f5; */
+  /* --gradient-color-4: #f2eff8; */
 
-  /* --gradient-color-1: #414f5f; */
-  /* --gradient-color-2: #6f7a88; */
-  /* --gradient-color-3: #a1a19e; */
-  /* --gradient-color-4: #f6fafb; */
-
-  /* --gradient-color-1: #002ff4; */
-  /* --gradient-color-2: #3d18d6; */ 
-  /* --gradient-color-3: #3853d7; */
-  /* --gradient-color-4: #a2b2ff; */
-
-  /* --gradient-color-1: #308ac6; */
-  /* --gradient-color-2: #4b9cd3; */
-  /* --gradient-color-3: #6baddb; */
-  /* --gradient-color-4: #7ab6df; */
-  /* --gradient-color-5: #97cdff; */
-
-  /* --gradient-color-1: #6baddb; */
-  /* --gradient-color-2: #7ab6df; */
-  /* --gradient-color-3: #308ac6; */
-  /* --gradient-color-4: #4b9cd3; */
-  /* --gradient-color-5: #97cdff; */
+  --gradient-color-1: #511da5; 
+  --gradient-color-2: #673ac1;
+  --gradient-color-3: #7e55dd;
+  --gradient-color-4: #9470fa;
 }
