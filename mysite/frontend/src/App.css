@@ -11,6 +11,7 @@
   --green: #00d181;
 
   --special-orange: #fc8300;
+  --special-orange: #9470fa;
   /* --special-orange: #fa973a; */
   /* --special-orange-bg: #312621; */
 
@@ -598,7 +599,7 @@ body::-webkit-scrollbar {
 /* } */
 
 .project-title p {
-  margin-top: .8em;
+  margin-top: .5em;
   /* margin-bottom: -.10em; */
   padding-right: .27em;
   width: 100%;
@@ -614,7 +615,7 @@ body::-webkit-scrollbar {
 .project-info-content {
   margin: .1em 5em 5em;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(16, 1fr);
 }
 
 .project-overview-title {
@@ -623,9 +624,11 @@ body::-webkit-scrollbar {
   justify-content: end;
   margin-right: 4em;
   letter-spacing: -1.5px;
+  grid-column: 7;
+  justify-content: start;
 }
 
-.project-overview-title p {
+.project-heading p {
   color: var(--white);
   font-size: 3em;
   font-weight: bold;
@@ -633,13 +636,9 @@ body::-webkit-scrollbar {
   justify-content: end;
 }
 
-.project-overview-title { 
-  grid-column: 4;
-  justify-content: start;
-}
-
 .project-info-overview {
-  grid-column: 5 / span 8;
+  font-size: 18px;
+  grid-column: 8 / span 8;
 }
 
 .bold {
@@ -647,9 +646,66 @@ body::-webkit-scrollbar {
 }
 
 .project-description-1 {
-  grid-column: 1 / span 4;
+  grid-column: 8 / span 8;
+  margin-top: 3em;
+  font-size: 18px;
 }
 
+.project-images {
+  grid-column: 1 / span 7;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr;
+}
+
+.gallery-image-1 {
+  span: 1;
+}
+
+/* -------------------------------------- Project More Info -------------------------------------- */
+.call-to-action-banner {
+  margin-top: 12em;
+  grid-column: 1 / span 15;
+  display: grid;
+  justify-content: center;
+}
+
+.call-to-action-banner p {
+  font-size: 1.7em;
+  color: var(--white);
+  font-style: italic;
+}
+
+.planning-title, .implementation-title {
+  margin-top: 8em;
+}
+
+.planning-title {
+  grid-column: 1 / span 16;
+  display: grid;
+  /* margin-right: auto; */
+  justify-content: start;
+}
+
+.implementation-title {
+  grid-column: 1 / span 16;
+  display: grid;
+  justify-content: end;
+  /* grid-column: 15; */
+}
+
+.planning-info {
+  grid-column: 1 / span 7;
+}
+
+.implementation-info {
+  grid-column: 8 / span 15;
+}
+
+
+
+
+/* -------------------------------------- Gradient Canvas Themes -------------------------------------- */
 #gradient-canvas {
   width:100%;
   height:100%;
