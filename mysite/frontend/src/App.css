@@ -10,8 +10,8 @@
   --charcoal: #202328;
   --green: #00d181;
 
-  --special-orange: #fc8300;
-  --special-orange: #9470fa;
+  --special-colour: #9470fa;
+  /* --special-orange: #fc8300; */
   /* --special-orange: #fa973a; */
   /* --special-orange-bg: #312621; */
 
@@ -34,11 +34,8 @@
 }
 
 ::selection { 
-  /* background: var(--carolina-blue); */
-  background: var(--special-orange);
-  /* background: var(--blue-purple); */
+  background: var(--special-colour);
   color: var(--black);
-  /* color: var(--white); */
 }
 
 body {
@@ -676,8 +673,15 @@ body::-webkit-scrollbar {
   font-style: italic;
 }
 
+.additional-project-information-container {
+  grid-column: 1 /span 16;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
 .planning-title, .implementation-title {
   margin-top: 8em;
+  margin-bottom: 1em;
 }
 
 .planning-title {
@@ -695,11 +699,11 @@ body::-webkit-scrollbar {
 }
 
 .planning-info {
-  grid-column: 1 / span 7;
+  grid-column: 1 / span 8;
 }
 
 .implementation-info {
-  grid-column: 8 / span 15;
+  grid-column: 9 / span 15;
 }
 
 
