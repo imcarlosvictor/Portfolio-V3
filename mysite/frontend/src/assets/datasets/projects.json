@@ -1,28 +1,18 @@
 {
   "nodes": [
-    {"id": "UX/UI Design", "neighbors": [], "links": []},
-    {"id": "Software Engineering", "neighbors": [], "links": []},
-    {"id": "Data Engineering", "neighbors": [], "links": []},
-    {"id": "Web Application", "neighbors": [], "links": []},
-    {"id": "Algorithms", "neighbors": [], "links": []},
-    {"id": "Car Rental App", "neighbors": [], "links": []},
-    {"id": "Weather Forecast App", "neighbors": [], "links": []},
     {"id": "Pathfinder Algorithm Visualizer", "neighbors": [], "links": []},
+    {"id": "Sorting Algorithm Visualizer", "neighbors": [], "links": []},
+    {"id": "Weather Forecast API", "neighbors": [], "links": []},
+    {"id": "Car Rental App", "neighbors": [], "links": []},
     {"id": "Unified Fugitive Database", "neighbors": [], "links": []},
     {"id": "GPU Web Scraper", "neighbors": [], "links": []},
     {"id": "Adam Williamson Portfolio Website", "neighbors": [], "links": []}
   ],
   "links": [
-    {"source": "UX/UI Design", "target": "Software Engineering"},
-    {"source": "Data Engineering", "target": "Software Engineering" },
-    {"source": "Web Application", "target": "Software Engineering"},
-    {"source": "Algorithms", "target": "Software Engineering"},
-
-    {"source": "Pathfinder Algorithm Visualizer", "target": "Algorithms"},
-    {"source": "Car Rental App", "target": "Web Application"},
-    {"source": "Weather Forecast App", "target": "Web Application"},
-    {"source": "Unified Fugitive Database", "target": "Data Engineering"},
-    {"source": "GPU Web Scraper", "target": "Data Engineering"},
-    {"source": "Adam Williamson Portfolio Website", "target": "UX/UI Design"} 
+    {"source": "Weather Forecast API", "target": "Adam Williamson Portfolio Website"},
+    {"source": "Car Rental App", "target": "Weather Forecast API"},
+    {"source": "GPU Web Scraper", "target": "Weather Forecast API"},
+    {"source": "Unified Fugitive Database", "target": "GPU Web Scraper"},
+    {"source": "Sorting Algorithm Visualizer", "target": "Pathfinder Algorithm Visualizer"}
   ]
 }

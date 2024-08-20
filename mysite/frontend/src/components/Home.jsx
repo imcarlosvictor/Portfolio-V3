@@ -66,11 +66,11 @@ export default function Home() {
           updateHighlight();
         }}
         onNodeClick={node => {
-          let urlID = node.id.replace(/\s+/g, "-");
-          console.log(urlID.toLowerCase());
-          console.log(`http://localhost:5173/${urlID.toLowerCase()}/`);
-          // window.location.replace(`http://localhost:5173/${urlID.toLowerCase()}`);
-        }}
+            let urlID = node.id.replace(/\s+/g, "-");
+            console.log(`http://localhost:5173/${urlID.toLowerCase()}/`);
+            // window.location.replace(`http://localhost:5173/${urlID.toLowerCase()}`);
+            }
+        }
         onLinkHover={link => {
           highlightNodes.clear();
           highlightLinks.clear();
@@ -87,7 +87,7 @@ export default function Home() {
         nodeThreeObject={node => {
           const nodeEl = document.createElement("div");
           nodeEl.textContent = node.id;
-          nodeEl.style.color = "#ffffff";
+          nodeEl.style.color = "#dfdedf";
           nodeEl.className = "node-label";
           return new CSS2DObject(nodeEl);
         }}
