@@ -44,8 +44,8 @@ export default function Home() {
         nodeColor={node => 
             highlightNodes.has(node)
               ? node === hoverNode
-                ? '#9470fa'
-                : '#2b9aa4'
+                ? '#33ff00'
+                : '#5c00ff'
                 : '#cecece'
         }
         nodeResolution={15}

@@ -10,14 +10,15 @@
   --charcoal: #202328;
   --green: #00d181;
 
-  --special-colour: #9470fa;
-  /* --special-orange: #ff5e00; */
-  /* --special-orange: #fc8300; */
-  /* --special-orange: #fa973a; */
-  /* --special-orange-bg: #312621; */
+  /* --special-colour: #9470fa; */
+  /* --special-colour: #5c00ff; */
+  /* --special-colour: #fc8300; */
+  --special-colour: #33ff00;
 
-  --special-red: #fd6464;
-  --special-red-bg: #26171b;
+  /* --special-orange: #fc8300; */
+  /* --special-orange-bg: #312621; */
+  /* --special-red: #fd6464; */
+  /* --special-red-bg: #26171b; */
 
   /* --carolina-blue: #6ab0f5; */
   /* --special: #2b9aa4; */
@@ -36,6 +37,7 @@
 
 ::selection { 
   background: var(--special-colour);
+  color: #eeeeee;
   color: var(--black);
 }
 
