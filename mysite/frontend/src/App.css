@@ -664,6 +664,9 @@ body::-webkit-scrollbar {
   grid-column: 1 / span 15;
   display: grid;
   justify-content: center;
+  border-top: 1px solid var(--darkgrey);
+  border-bottom: 1px solid var(--darkgrey);
+  padding: 6em;
 }
 
 .call-to-action-banner p {
@@ -679,17 +682,10 @@ body::-webkit-scrollbar {
 }
 
 .planning-title, .implementation-title {
-  margin-top: 8em;
+  margin-top: 12em;
   margin-bottom: 1em;
   display: grid;
   grid-column: 1 / span 16;
-}
-
-.planning-line-divider-2, .planning-line-divider, .implementation-line-divider {
-  position: relative;
-  top: 30px;
-  background: var(--darkgrey);
-  height: 1px;
 }
 
 .planning-title {
@@ -697,14 +693,8 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(16, 1fr);
 }
 
-.planning-line-divider {
-  grid-column: 2 / span 16;
-}
-
 .planning-title p {
-  grid-column: 1;
-  margin-right: .8em;
-  margin-left: 1em;
+  grid-column: 4;
   display: grid;
   justify-content: start;
 }
@@ -714,18 +704,11 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(16, 1fr);
 }
 
-.implementation-line-divider {
-  grid-column: 1 / span 15;
-}
-
 .implementation-title p {
-  grid-column: 16;
-  margin-left: .8em;
-  margin-right: 1em;
+  grid-column: 13;
   display: grid;
   justify-content: end;
 }
-
 
 .planning-info {
   grid-column: 1 / span 8;

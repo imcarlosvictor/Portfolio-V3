@@ -135,7 +135,6 @@ export default function Project() {
 
                 <div className="additional-project-information-container">
                   <div className="planning-title project-heading">
-                    <div className="planning-line-divider line-divider"></div>
                     <p>Planning</p>
                   </div>
                   <div className="planning-info">
@@ -146,7 +145,6 @@ export default function Project() {
 
                   <br></br>
                   <div className="implementation-title project-heading">
-                    <div className="implementation-line-divider line-divider"></div>
                     <p>Implementation</p>
                   </div>
                   <div className="implementation-info">
