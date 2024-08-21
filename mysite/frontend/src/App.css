@@ -11,9 +11,9 @@
   --green: #00d181;
 
   /* --special-colour: #9470fa; */
-  /* --special-colour: #5c00ff; */
+  --special-colour: #5c00ff;
   /* --special-colour: #fc8300; */
-  --special-colour: #33ff00;
+  /* --special-colour: #33ff00; */
 
   /* --special-orange: #fc8300; */
   /* --special-orange-bg: #312621; */
@@ -38,7 +38,7 @@
 ::selection { 
   background: var(--special-colour);
   color: #eeeeee;
-  color: var(--black);
+  /* color: var(--black); */
 }
 
 body {
@@ -721,6 +721,11 @@ body::-webkit-scrollbar {
   --gradient-color-2: #673ac1;
   --gradient-color-3: #7e55dd;
   --gradient-color-4: #9470fa;
+
+  --gradient-color-1: #4630b5; 
+  --gradient-color-2: #4b2ace;
+  --gradient-color-3: #531fe7;
+  --gradient-color-4: #5d00ff;
 
   /* --gradient-color-1: #df1b11; */ 
   /* --gradient-color-2: #e63515; */
