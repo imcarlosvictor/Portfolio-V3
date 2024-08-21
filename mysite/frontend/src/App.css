@@ -5,16 +5,12 @@
   --grey: #1e1d1e;
   --lightgrey: #525252;
   --darkgrey: #222222;
-  --titan-grey: #515455;
-  --cool-grey: #7e8aa2;
   --charcoal: #202328;
   --green: #00d181;
 
   /* --special-colour: #9470fa; */
   /* --special-colour: #5c00ff; */
-  /* --special-colour: #fc8300; */
-  /* --special-colour: #33ff00; */
-  --special-colour: #6ab0f5;
+  --special-colour: #7e8aa2;
 
   /* --special-orange: #fc8300; */
   /* --special-orange-bg: #312621; */
@@ -38,10 +34,6 @@
 
 ::selection { 
   background: var(--special-colour);
-  /* color: #eeeeee; */
-  
-  /* background: #9c130b; */
-  color: #eeeeee;
   color: var(--black);
 }
 
@@ -689,21 +681,51 @@ body::-webkit-scrollbar {
 .planning-title, .implementation-title {
   margin-top: 8em;
   margin-bottom: 1em;
+  display: grid;
+  grid-column: 1 / span 16;
+}
+
+.planning-line-divider-2, .planning-line-divider, .implementation-line-divider {
+  position: relative;
+  top: 30px;
+  background: var(--darkgrey);
+  height: 1px;
 }
 
 .planning-title {
-  grid-column: 1 / span 16;
   display: grid;
-  /* margin-right: auto; */
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.planning-line-divider {
+  grid-column: 2 / span 16;
+}
+
+.planning-title p {
+  grid-column: 1;
+  margin-right: .8em;
+  margin-left: 1em;
+  display: grid;
   justify-content: start;
 }
 
 .implementation-title {
-  grid-column: 1 / span 16;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.implementation-line-divider {
+  grid-column: 1 / span 15;
+}
+
+.implementation-title p {
+  grid-column: 16;
+  margin-left: .8em;
+  margin-right: 1em;
   display: grid;
   justify-content: end;
-  /* grid-column: 15; */
 }
+
 
 .planning-info {
   grid-column: 1 / span 8;
