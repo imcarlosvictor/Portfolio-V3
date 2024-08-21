@@ -11,9 +11,10 @@
   --green: #00d181;
 
   /* --special-colour: #9470fa; */
-  --special-colour: #5c00ff;
+  /* --special-colour: #5c00ff; */
   /* --special-colour: #fc8300; */
   /* --special-colour: #33ff00; */
+  --special-colour: #6ab0f5;
 
   /* --special-orange: #fc8300; */
   /* --special-orange-bg: #312621; */
@@ -37,8 +38,11 @@
 
 ::selection { 
   background: var(--special-colour);
+  /* color: #eeeeee; */
+  
+  /* background: #9c130b; */
   color: #eeeeee;
-  /* color: var(--black); */
+  color: var(--black);
 }
 
 body {
