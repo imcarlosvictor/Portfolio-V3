@@ -56,12 +56,6 @@ export default function Project() {
                   </div>
                 </div>
 
-                {/* <div className="scrolldown"> */}
-                {/*   <span></span> */}
-                {/*   <span></span> */}
-                {/*   <span></span> */}
-                {/* </div> */}
-
                 <div className="banner">
                   <div className="banner-text">
                     Data Engineering <span className="text-divider">• </span>
@@ -98,10 +92,20 @@ export default function Project() {
                 </div>
               </div>
 
+              <div className="table-of-contents-container">
+                <div className="table-of-contents">
+                  <p><a href="#project-overview" className="toc-content">Overview</a></p>
+                  <p>//</p>
+                  <p><a href="#call-to-action" className="toc-content">Planning</a></p>
+                  <p>//</p>
+                  <p><a href="#implementation-title" className="toc-content">Implementation</a></p>
+                  <p>//</p>
+                  <p><a href="#" className="toc-content">Result</a></p>
+                </div>
+              </div>
 
-
-              <div className="project-title">
-                <p>Medusa</p>
+              <div className="project-title" id="project-overview">
+                <p>Title</p>
               </div>
               <div className="project-info-content">
                 <div className="project-overview-title project-heading">
@@ -129,7 +133,7 @@ export default function Project() {
                 </div>
 
                 <br></br>
-                <div className="call-to-action-banner">
+                <div className="call-to-action-banner" id="call-to-action">
                   <p>"Call to action"</p>
                 </div>
 
@@ -144,7 +148,7 @@ export default function Project() {
                   </div>
 
                   <br></br>
-                  <div className="implementation-title project-heading">
+                  <div className="implementation-title project-heading" id="implementation-title">
                     <p>Implementation</p>
                   </div>
                   <div className="implementation-info">
