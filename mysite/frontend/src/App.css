@@ -14,7 +14,8 @@
   /* --special-colour: #7e8aa2; */
   /* --special-colour: #00a198; */
   /* --special-colour: #763aff; */
-  --special-colour: #7438ff;
+  /* --special-colour: #7438ff; */
+  --special-colour: #5c00ff;
 
   /* --special-orange: #fc8300; */
   /* --special-orange-bg: #312621; */
@@ -364,13 +365,13 @@ body::-webkit-scrollbar {
 }
 
 .project-quick-info-title p {
-  color: var(--black);
+  color: var(--white);
   margin: 1em 0;
   font-size: 16px;
 }
 
 .project-quick-info-content p {
-  color: var(--black);
+  color: var(--white);
   margin: 1em 0;
   font-size: 16px;
 }
@@ -401,12 +402,12 @@ body::-webkit-scrollbar {
   animation: 25s slide infinite linear; /* Adjust animation duration as needed */
   font-size: 11px;
   text-transform: uppercase;
-  color: var(--black);
+  color: var(--white);
 }
 
 .text-divider {
   padding: 0 1em;
-  color: var(--black);
+  color: var(--white);
 }
 
 @keyframes scroll {
@@ -612,16 +613,16 @@ body::-webkit-scrollbar {
   /* --gradient-color-4: #9470fa; */
 
   /* purple 2 */
-  --gradient-color-1: #7438ff; 
-  --gradient-color-2: #8760ff;
-  --gradient-color-3: #9b83ff;
-  --gradient-color-4: #b1a3ff;
+  /* --gradient-color-1: #7438ff; */ 
+  /* --gradient-color-2: #8760ff; */
+  /* --gradient-color-3: #9b83ff; */
+  /* --gradient-color-4: #b1a3ff; */
 
   /* blue-purple */
-  /* --gradient-color-1: #4630b5; */ 
-  /* --gradient-color-2: #4b2ace; */
-  /* --gradient-color-3: #531fe7; */
-  /* --gradient-color-4: #5d00ff; */
+  --gradient-color-1: #4630b5; 
+  --gradient-color-2: #4b2ace;
+  --gradient-color-3: #531fe7;
+  --gradient-color-4: #5d00ff;
 
   /* peach */
   /* --gradient-color-1: #ffdebe; */ 
