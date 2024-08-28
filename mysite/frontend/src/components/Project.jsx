@@ -40,18 +40,18 @@ export default function Project() {
                 <div className="project-quick-info">
                   <div className="project-quick-info-container">
                     <div className="project-quick-info-title">
-                      <p>release</p>
-                      <p>release</p>
-                      <p>release</p>
-                      <p>release</p>
-                      <p>release</p>
+                      <p>Project</p>
+                      <p>Type</p>
+                      <p>Version</p>
+                      <p>Date</p>
+                      <p>Status</p>
                     </div>
                     <div className="project-quick-info-content">
-                      <p>content</p>
-                      <p>content</p>
-                      <p>content</p>
-                      <p>content</p>
-                      <p>content</p>
+                      <p>Title</p>
+                      <p>Data Engineering</p>
+                      <p>1.0</p>
+                      <p>01/05/2024</p>
+                      <p>completed</p>
                     </div>
                   </div>
                 </div>
