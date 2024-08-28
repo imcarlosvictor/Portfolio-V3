@@ -10,9 +10,11 @@
   --green: #00d181;
 
   /* --special-colour: #9470fa; */
-  /* --special-colour: #5c00ff; */
+  /* --special-colour: #763aff; */
   /* --special-colour: #7e8aa2; */
-  --special-colour: #00a198;
+  /* --special-colour: #00a198; */
+  /* --special-colour: #763aff; */
+  --special-colour: #7438ff;
 
   /* --special-orange: #fc8300; */
   /* --special-orange-bg: #312621; */
@@ -23,6 +25,7 @@
   /* --special: #2b9aa4; */
   /* --special: #00a198; */
   /* --blue-purple: #651fff; */
+  /* --special-colour: #5c00ff; */
 }
 
 * {
@@ -358,19 +361,18 @@ body::-webkit-scrollbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: .5em;
-  font-weight: bold;
 }
 
 .project-quick-info-title p {
-  color: var(--white);
+  color: var(--black);
   margin: 1em 0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .project-quick-info-content p {
-  color: var(--white);
+  color: var(--black);
   margin: 1em 0;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 @keyframes slide {
@@ -392,7 +394,6 @@ body::-webkit-scrollbar {
   background-color: rgba(0,0,0,0);
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
-  color: var(--white);
 }
 
 .banner-text {
@@ -400,12 +401,12 @@ body::-webkit-scrollbar {
   animation: 25s slide infinite linear; /* Adjust animation duration as needed */
   font-size: 11px;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--black);
 }
 
 .text-divider {
   padding: 0 1em;
-  color: var(--white);
+  color: var(--black);
 }
 
 @keyframes scroll {
@@ -610,11 +611,17 @@ body::-webkit-scrollbar {
   /* --gradient-color-3: #7e55dd; */
   /* --gradient-color-4: #9470fa; */
 
+  /* purple 2 */
+  --gradient-color-1: #7438ff; 
+  --gradient-color-2: #8760ff;
+  --gradient-color-3: #9b83ff;
+  --gradient-color-4: #b1a3ff;
+
   /* blue-purple */
-  --gradient-color-1: #4630b5; 
-  --gradient-color-2: #4b2ace;
-  --gradient-color-3: #531fe7;
-  --gradient-color-4: #5d00ff;
+  /* --gradient-color-1: #4630b5; */ 
+  /* --gradient-color-2: #4b2ace; */
+  /* --gradient-color-3: #531fe7; */
+  /* --gradient-color-4: #5d00ff; */
 
   /* peach */
   /* --gradient-color-1: #ffdebe; */ 
