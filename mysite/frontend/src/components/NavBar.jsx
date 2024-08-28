@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
       <nav>
         <div className="socials-navbar">
-          <a className="favicon" href="#">
+          <a className="favicon" href="http://localhost:5173/">
               <img src="../src/assets/icons/favicon-dark-32x32.png" alt="favicon-icon" className="social-navbar-icons" id="linkedin-icon"/>
           </a>
 

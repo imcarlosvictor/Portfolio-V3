@@ -118,12 +118,7 @@ export default function Project() {
             Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh.
                   </p>
                 </div>
-                <div className="project-images">
-                  <img src="" alt="gallery-image" className="gallery-image gallery-image-1"/>
-                  <img src="" alt="gallery-image" className="gallery-image gallery-image-2"/>
-                  <img src="" alt="gallery-image" className="gallery-image gallery-image-3"/>
-                  <img src="" alt="gallery-image" className="gallery-image gallery-image-4"/>
-                </div>
+
                 <div className="project-description-1">
                   <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse in est ante in. Fames ac turpis egestas maecenas pharetra convallis posuere. Lectus arcu bibendum at varius vel pharetra vel turpis. Lectus mauris ultrices eros in cursus turpis. Vitae tempus quam pellentesque nec. Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Orci phasellus egestas tellus rutrum tellus pellentesque. Netus et malesuada fames ac turpis. Vestibulum lorem sed risus ultricies tristique. Sed risus pretium quam vulputate dignissim suspendisse in est. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Cursus risus at ultrices mi tempus imperdiet nulla. Eu sem integer vitae justo eget.
@@ -133,28 +128,52 @@ export default function Project() {
                 </div>
 
                 <br></br>
+                <div className="project-images-container">
+                  <img src="https://plus.unsplash.com/premium_photo-1666184127594-5161d3125d84?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="gallery-image" className="gallery-image gallery-image-1" id="slide-1"/>
+                  <img src="https://plus.unsplash.com/premium_photo-1666184129790-62db4aa5949d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="gallery-image" className="gallery-image gallery-image-2" id="slide-2"/>
+                  <img src="https://images.unsplash.com/photo-1723754165998-305df32c501e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="gallery-image" className="gallery-image gallery-image-3" id="slide-3"/>
+                  <img src="https://plus.unsplash.com/premium_photo-1713190068595-cb46b2c42e7a?q=80&w=2062&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="gallery-image" className="gallery-image gallery-image-4" id="slide-4"/>
+                </div>
+
+
+                <br></br>
                 <div className="call-to-action-banner" id="call-to-action">
                   <p>"Call to action"</p>
                 </div>
 
                 <div className="additional-project-information-container">
-                  <div className="planning-title project-heading">
-                    <p>Planning</p>
-                  </div>
-                  <div className="planning-info">
-                    <p>
-              Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
-                    </p>
+                  <div className="planning-container">
+                    <div className="planning-info">
+                      <p>
+                Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
+                      </p>
+                    </div>
+                    <div className="planning-title project-heading">
+                      <p>Planning</p>
+                    </div>
+                    <div className="planning-info">
+                      <p>
+                        <br></br>
+                Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
+                      </p>
+                    </div>
                   </div>
 
                   <br></br>
-                  <div className="implementation-title project-heading" id="implementation-title">
-                    <p>Implementation</p>
-                  </div>
-                  <div className="implementation-info">
-                    <p>
-              Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
-                    </p>
+                  <div className="implementation-container">
+                    <div className="implementation-title project-heading" id="implementation-title">
+                      <p>Implementation</p>
+                    </div>
+                    <div className="implementation-info">
+                      <p>
+                Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
+                      </p>
+
+                      <p>
+                        <br></br>
+                Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

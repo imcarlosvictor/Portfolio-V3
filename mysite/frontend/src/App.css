@@ -12,7 +12,8 @@
   /* --special-colour: #9470fa; */
   /* --special-colour: #5c00ff; */
   /* --special-colour: #ffac7f; */
-  --special-colour: #7e8aa2;
+  /* --special-colour: #7e8aa2; */
+  --special-colour: #00a198;
 
   /* --special-orange: #fc8300; */
   /* --special-orange-bg: #312621; */
@@ -21,6 +22,7 @@
 
   /* --carolina-blue: #6ab0f5; */
   /* --special: #2b9aa4; */
+  /* --special: #00a198; */
   /* --blue-purple: #651fff; */
 }
 
@@ -329,108 +331,6 @@ body::-webkit-scrollbar {
   border: 1px var(--black);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .project-extras-container { */
-/*   margin-top: 3em; */
-/*   width: 75%; */
-/*   height: 50em; */
-/*   display: grid; */
-/*   justify-content: start; */
-/*   grid-template-columns: repeat(5, .6fr); */
-/*   gap: 100px; */
-/* } */
-
-/* .project-folder { */
-/*   width: 140px; */
-/*   height: 180px; */
-/*   margin: 0 auto; */
-/*   position: relative; */
-/*   background-color: rgba(35,35,35,.3); */
-/*   /1* background-color: rgba(192,192,208,.1); *1/ */
-/*   background: var(--lightgrey); */
-/* } */
-
-/* .project-folder:before { */
-/*     content: ''; */
-/*     width: 60%; */
-/*     height: 12px; */
-/*     width: 100%; */
-/*     height: 100%; */
-/*     position: absolute; */
-/*     top: -12px; */
-/* } */
-
-/* .project-folder { */
-/*   clip-path: polygon( */
-/*     0% 0%, 98% 0%, 100% 3%, 100% 100%, 10% 100%, 0% 92% */
-/*   ); */
-/* } */
-
-/* SIM CARD */
-/* .project-folder { */
-/*   clip-path: polygon( */
-/*     0% 0%, 82% 0%, 100% 13%, */ 
-/*     100% 30%, 98% 30%, 98% 35%, 100% 35%, */ 
-/*     100% 98%, 98% 100%, */ 
-/*     2% 100%, 0% 98%, */ 
-/*     0% 50%, 2% 50%, 2% 33%, .7% 33%, .7% 30%, 2% 30%, 2% 35%, 2% 25%, 0% 25% */
-/*   ); */
-/* } */
-
-
-/* .project-folder { */
-/*   clip-path: polygon( */
-/*     0% 0%, 98% 0%, */
-/*     100% 3%, 100% 100%, */
-/*     3% 100%, 0% 98%, */
-/*   ); */
-/* } */
-
-/* .project-folder:hover { */
-/*   /1* background: linear-gradient(to bottom, #f0cd82, #fcd571); *1/ */
-/*   background: var(--darkgrey); */
-/*   cursor: pointer; */
-/* } */
-
-/* .project-info { */
-/*   width: 100%; */
-/*   height: 80%; */
-/*   padding: 1em 1em; */
-/*   /1* background-color: rgba(51,255,0,.6); *1/ */
-/* } */
-
-/* .project-title { */
-/*   margin-top: .3em; */
-/*   font-size: 18px; */
-/*   font-weight: bold; */
-/*   color: var(--black); */
-/* } */
-
 /* ######################################################### */
 /* PROJECT PAGE */
 /* ######################################################### */
@@ -548,6 +448,7 @@ body::-webkit-scrollbar {
 .table-of-contents {
   display: flex;
   width: 100%;
+  border: .2px var(--charcoal) solid;
 }
 
 .table-of-contents p {
@@ -556,6 +457,10 @@ body::-webkit-scrollbar {
   justify-content: center;
 }
 
+/* .table-of-contents p:nth-child(even) { */
+/*   margin: 1.5em 0; */
+/* } */
+
 .table-of-contents p > a {
   font-weight: bold;
   text-decoration: none;
@@ -563,6 +468,7 @@ body::-webkit-scrollbar {
 
 .toc-content:hover {
   color: var(--grey-white);
+  color: var(--special-colour);
 }
 
 .project-title p {
@@ -584,27 +490,43 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(16, 1fr);
 }
 
-.project-overview-title {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  margin-right: 4em;
-  letter-spacing: -1.5px;
-  grid-column: 7;
-  justify-content: start;
-}
-
 .project-heading p {
   color: var(--grey-white);
   font-size: 3em;
+  letter-spacing: -1.5px;
   font-weight: bold;
   display: flex;
   justify-content: end;
 }
 
+.project-overview-title {
+  margin-right: 4em;
+  grid-column: 5;
+}
+
+.planning-title {
+  grid-column: 9;
+  margin-left: 2em;
+}
+
+.implementation-title {
+  grid-column: 7;
+  margin-right: 2em;
+}
+
+/* .planning-title p { */
+/*   grid-column: 4; */
+/*   display: grid; */
+/*   justify-content: start; */
+/* } */
+
+/* .implementation-title p { */
+/*   grid-column: 13; */
+/* } */
+
 .project-info-overview {
   font-size: 18px;
-  grid-column: 8 / span 16;
+  grid-column: 6 / span 16;
 }
 
 .bold {
@@ -612,17 +534,27 @@ body::-webkit-scrollbar {
 }
 
 .project-description-1 {
-  grid-column: 8 / span 16;
-  margin-top: 3em;
+  grid-column: 6 / span 16;
+  margin-top: 2em;
   font-size: 18px;
 }
 
-.project-images {
-  grid-column: 1 / span 7;
+.project-images-container {
+  margin-top: 5em;
+  padding: 1em;
+  grid-column: 1 / span 16;
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+  gap: .5em;
+
 }
+
+.project-images-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
 
 .gallery-image-1 {
   span: 1;
@@ -651,33 +583,11 @@ body::-webkit-scrollbar {
   grid-template-columns: repeat(16, 1fr);
 }
 
-.planning-title, .implementation-title {
-  margin-top: 12em;
-  margin-bottom: 1em;
-  display: grid;
+.planning-container, .implementation-container {
   grid-column: 1 / span 16;
-}
-
-.planning-title {
+  margin-top: 8em;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-}
-
-.planning-title p {
-  grid-column: 4;
-  display: grid;
-  justify-content: start;
-}
-
-.implementation-title {
-  display: grid;
-  grid-template-columns: repeat(16, 1fr);
-}
-
-.implementation-title p {
-  grid-column: 13;
-  display: grid;
-  justify-content: end;
 }
 
 .planning-info {
@@ -685,10 +595,8 @@ body::-webkit-scrollbar {
 }
 
 .implementation-info {
-  grid-column: 9 / span 15;
+  grid-column: 8 / span 16;
 }
-
-
 
 
 /* -------------------------------------- Gradient Canvas Themes -------------------------------------- */
