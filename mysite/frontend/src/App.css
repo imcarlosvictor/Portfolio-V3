@@ -40,7 +40,7 @@
 }
 
 ::selection { 
-  background: var(--special-colour);
+  background: var(--grey-white);
   color: var(--black);
 }
 
@@ -470,7 +470,6 @@ body::-webkit-scrollbar {
 
 .toc-content:hover {
   color: var(--grey-white);
-  color: var(--special-colour);
 }
 
 .project-title p {
