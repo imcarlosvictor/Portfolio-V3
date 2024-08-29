@@ -1,8 +1,22 @@
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 export default function About() {
+  useEffect(() => {
+    const open = document.getElementById("resume-btn");
+    const modalContainer = document.getElementById("modal-container");
+    const close = document.getElementById("close");
+
+    open.addEventListener("click", () => {
+      modalContainer.classList.add("show");
+    });
+
+    close.addEventListener("click", () => {
+      modalContainer.classList.remove("show");
+    });
+  }, []);
+
   const createAboutPage = () => {
     return (
       <>
@@ -13,8 +27,15 @@ export default function About() {
               <p className="my-name">Carlos Victor Torres</p> 
               <p className="aspiration">A <span id="profession">software developer</span> based in Toronto.</p>
               <div className="info">
-                <a href="#project-header"><button id="to-projects">Resume</button></a>
+                <button id="resume-btn">Resume</button>
               </div>
+            </div>
+          </div>
+
+          <div className="modal-container" id="modal-container">
+            <div className="modal">
+              <iframe src="src/assets/CarlosVictorTorres_SWE_Resume.pdf" width="100%" height="100%"></iframe>
+              <button id="close">Close</button>
             </div>
           </div>
 
