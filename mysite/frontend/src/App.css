@@ -183,7 +183,7 @@ body::-webkit-scrollbar {
   transition: all 0.2s ease;
 }
 
-#to-projects:hover {
+#resume-btn:hover {
   cursor: pointer;
   background: var(--white);
   color: var(--black);
