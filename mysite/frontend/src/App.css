@@ -495,7 +495,6 @@ body::-webkit-scrollbar {
 .table-of-contents {
   display: flex;
   width: 100%;
-  border: .2px var(--charcoal) solid;
 }
 
 .table-of-contents p {
@@ -503,10 +502,6 @@ body::-webkit-scrollbar {
   font-size: 22px;
   justify-content: center;
 }
-
-/* .table-of-contents p:nth-child(even) { */
-/*   margin: 1.5em 0; */
-/* } */
 
 .table-of-contents p > a {
   font-weight: bold;
