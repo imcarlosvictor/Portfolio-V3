@@ -6,7 +6,7 @@ export default function Navbar() {
       <nav>
         <div className="socials-navbar">
           <a className="favicon" href="http://localhost:5173/">
-              <img src="../src/assets/icons/favicon-32x32.png" alt="favicon-icon" className="social-navbar-icons" id="linkedin-icon"/>
+              <img src="../src/assets/icons/favicon-black-32x32.png" alt="favicon-icon" className="social-navbar-icons" id="linkedin-icon"/>
           </a>
 
           <div className="socials">

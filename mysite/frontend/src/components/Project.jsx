@@ -141,26 +141,22 @@ export default function Project() {
                   <p>"Call to action"</p>
                 </div>
 
-                <div className="additional-project-information-container">
-                  <div className="planning-container">
-                    <div className="planning-info">
-                      <p>
-                Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
-                      </p>
-                    </div>
-                    <div className="planning-title project-heading">
-                      <p>Planning</p>
-                    </div>
-                    <div className="planning-info">
-                      <p>
-                        <br></br>
-                Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
-                      </p>
-                    </div>
-                  </div>
+                <div className="planning-title project-heading">
+                  <p>Planning</p>
+                </div>
+                <div className="planning-info">
+                  <p>
+            Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
+                  </p>
+                </div>
+                <div className="planning-info">
+                  <p>
+                    <br></br>
+            Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
+                  </p>
+                </div>
 
-                  <br></br>
-                  <div className="implementation-container">
+
                     <div className="implementation-title project-heading" id="implementation-title">
                       <p>Implementation</p>
                     </div>
@@ -174,6 +170,15 @@ export default function Project() {
                 Vitae et leo duis ut diam quam nulla porttitor. Mattis aliquam faucibus purus in massa tempor nec feugiat. Risus pretium quam vulputate dignissim suspendisse in est ante. Mattis vulputate enim nulla aliquet. Arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales. Tellus at urna condimentum mattis pellentesque id nibh. Lectus nulla at volutpat diam ut venenatis. A arcu cursus vitae congue mauris rhoncus aenean vel elit. Purus in massa tempor nec feugiat nisl. Ultricies integer quis auctor elit sed vulputate mi. Eu scelerisque felis imperdiet proin fermentum leo. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam. A iaculis at erat pellentesque adipiscing. Et malesuada fames ac turpis egestas sed tempus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. In nibh mauris cursus mattis molestie a.
                       </p>
                     </div>
+
+
+
+                <div className="additional-project-information-container">
+                  <div className="planning-container">
+                  </div>
+
+                  <br></br>
+                  <div className="implementation-container">
                   </div>
                 </div>
               </div>
