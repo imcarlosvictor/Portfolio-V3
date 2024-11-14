@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Gradient } from './Gradient.js'
 
-
 export default function About() {
+
   useEffect(() => {
     // Create instance
     const gradient = new Gradient()
@@ -21,6 +21,7 @@ export default function About() {
     close.addEventListener("click", () => {
       modalContainer.classList.remove("show");
     });
+
   }, []);
 
   const createAboutPage = () => {
@@ -82,6 +83,41 @@ export default function About() {
                 </div>
               </div>
             </div>
+
+            <div className="services-container">
+              <section className="sticky">
+                <div className="col">
+                  <div className="services">
+                    <div className="service"><p>Web Scraping</p></div>
+                    <div className="service"><p>Data Engineering</p></div>
+                    <div className="service"><p>Data Analysis</p></div>
+                    <div className="service"><p>Web Devlopment</p></div>
+                    <div className="service"><p>IoT</p></div>
+                    <div className="service"><p>UX/UI Design</p></div>
+                  </div>
+                </div>
+                <div className="breaker"></div>
+                <div className="col">
+                  <div className="service-img-wrapper">
+                    <div className="service-img">
+                      <div className="img"><img src="./assets/img1.jpg" alt="" /></div>
+                      <div className="img"><img src="./assets/img1.jpg" alt="" /></div>
+                      <div className="img"><img src="./assets/img1.jpg" alt="" /></div>
+                      <div className="img"><img src="./assets/img1.jpg" alt="" /></div>
+                      <div className="img"><img src="./assets/img1.jpg" alt="" /></div>
+                      <div className="img"><img src="./assets/img1.jpg" alt="" /></div>
+                    </div>
+                  </div>
+                  <div className="service-copy">
+                    <p>aowajfowafjwaofjwaoajwfpowaijfowaijfwaopfjwapofjwafopjwf</p>
+                  </div>
+                </div>
+                <div className="progress-bar">
+                  <div className="progress"></div>
+                </div>
+              </section>
+            </div>
+
           </div>
 
           <canvas id="gradient-canvas" data-transition-in />
